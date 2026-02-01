@@ -1,19 +1,13 @@
-# Welcome to MkDocs
+# Welcome:)
+## Hi...
+#### *Hi, there. It's me, emm...*:fox:*..senven..six, and six...*
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+<div style="text-align: center; font-size:20px"  markdown="1">
+    “可惜一溪风月，莫教踏碎琼瑶”
+    </div>
 
-## Commands
+![img](assets/home_1.jpg)
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+## About Me
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
-    
-I like play :beers:
+#### [:fontawesome-brands-github:](https://github.com/fox766) [My GitHub](https://github.com/fox766)

@@ -1,9 +1,16 @@
 site_name: fox766's note
-site_url: https://fox766.note
+site_url: https://fox766.github.io/notebook/
+repo_url: https://github.com/fox766/notebook
+repo_name: fox766/notebook
+copyright: Copyright &copy; 2026 fox766
+
 theme: 
   name: material
+  custom_dir: overrides
   logo: assets/logo.png
   favicon: assets/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
   palette: 
     # Palette toggle for light mode
     - scheme: default
@@ -21,7 +28,7 @@ theme:
       primary: black
       accent: deep orange
   font:
-    text: Noto Sans Tagbanwa
+    text: Comic Relief
     code: Roboto Mono
   language: zh
   features:
@@ -32,6 +39,7 @@ theme:
     - navigation.sections
     - navigation.path
     - navigation.footer
+    - navigation.expand
 
 
 markdown_extensions:
@@ -61,7 +69,10 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/fox766
 
-copyright: Copyright &copy; 2026 fox766
+nav:
+  - Home:
+    - index.md
+    - 更新记录: changelog.md
 
     
 
