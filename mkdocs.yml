@@ -69,9 +69,16 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/fox766
 
+plugins:
+  - changelog
+
+extra_css:
+  - stylesheets/css/timelinecard.css
+  - stylesheets/css/md.css
+
 nav:
   - Home:
-    - index.md
+    - Welcome: index.md
     - 更新记录: changelog.md
 
     

@@ -1,0 +1,18 @@
+/*timeline card */
+
+.timeline-card {
+    background-color: #F5F5F5;
+}
+
+.timeline-content::before {
+    background-color: #F5F5F5;
+}
+
+/* 深色模式下的适配 */
+[data-md-color-scheme="slate"] .timeline-card {
+    background-color: #404040 !important;
+}
+
+[data-md-color-scheme="slate"] .timeline-content::before {
+    background-color: #404040 !important;
+}
