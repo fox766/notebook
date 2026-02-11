@@ -1,0 +1,8 @@
+/* modifications of the fonts*/
+.md-typeset h1 {
+    font-weight: 500;
+}
+
+.md-typeset .admonition, .md-typeset details {
+    font-size: .72rem;
+}
