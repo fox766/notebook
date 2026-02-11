@@ -36,10 +36,8 @@ theme:
     - navigation.instant.prefetch
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.sections
     - navigation.path
     - navigation.footer
-    - navigation.expand
 
 
 markdown_extensions:
@@ -80,6 +78,14 @@ nav:
   - Home:
     - Welcome: index.md
     - 更新记录: changelog.md
+  - CS:
+    - cs61A: 
+      - cs61A/index.md
+      - cs61A/Function.md
+    - cs61B:
+      - cs61B/index.md
+
+
 
     
 
