@@ -23,9 +23,9 @@ A common use: Two similar classes differ in their degree of specialization.
 
 The specialized class may have the same attributes as the general class, along with some special-case behavior.
 
-> **class <name> (<base class>) :**
+> **class <name\> (<base class\>) :**
 >
-> ​	<suite>
+> ​	<suite\>
 
 Conceptually, the new *subclass* "shares" attributes with its base class.
 

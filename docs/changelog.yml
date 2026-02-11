@@ -1,4 +1,8 @@
 - "2026":
+  - "2026-2-11":
+    - pageupdate:
+        text: CS > cs61A > ...
+        href: ../cs61A
   - "2026-2-10":
     - newpage: Home > 更新记录
     - newpage:

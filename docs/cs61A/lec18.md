@@ -40,9 +40,9 @@ print("the x-coordinate is", ball1.x) # 5.3
 
 ## The Class Statement
 
-> **class <name>:**
+> **class <name\>:**
 >
-> ​    **<suite>**
+> ​    **<suite\>**
 
 The suite is executed when the class statement is executed.
 
@@ -120,7 +120,7 @@ Objects receive message via dot notation.
 
 Dot notation accesses attributes of the instance or its class.
 
-​					<expression> **.** <name>
+​					<expression\> **.** <name\>
 
 The <expression> can be any valid Python expression.
 
@@ -187,7 +187,7 @@ Python distinguishes between:
 
 ## Looking Up Attributes by Name
 
-> <expression> **.**  <name>
+> <expression\> **.**  <name\>
 
 To evaluate a dot expression:
 
