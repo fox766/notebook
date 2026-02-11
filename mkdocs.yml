@@ -81,7 +81,36 @@ nav:
   - CS:
     - cs61A: 
       - cs61A/index.md
-      - cs61A/Function.md
+      - cs61A/lec2.md
+      - cs61A/lec3.md
+      - cs61A/lec4.md
+      - cs61A/lec5.md
+      - cs61A/lec6.md
+      - cs61A/lec7.md
+      - cs61A/lec8.md
+      - cs61A/lec9.md
+      - cs61A/lec10.md
+      - cs61A/lec11.md
+      - cs61A/lec12.md
+      - cs61A/lec15.md
+      - cs61A/lec16.md
+      - cs61A/lec17.md
+      - cs61A/lec18.md
+      - cs61A/lec19.md
+      - cs61A/lec20.md
+      - cs61A/lec21.md
+      - cs61A/lec22.md
+      - cs61A/lec23.md
+      - cs61A/lec24.md
+      - cs61A/lec26.md
+      - cs61A/lec27.md
+      - cs61A/lec28.md
+      - cs61A/lec29.md
+      - cs61A/lec30.md
+      - cs61A/lec31.md
+      - cs61A/lec32.md
+      - cs61A/lec33.md
+      - cs61A/lec34.md
     - cs61B:
       - cs61B/index.md
 
