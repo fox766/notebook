@@ -113,6 +113,12 @@ nav:
       - cs61A/lec34.md
     - cs61B:
       - cs61B/index.md
+  - Energy Engineering:
+    - 暖通空调:
+      - air-cond/index.md
+      - air-cond/lec1.md
+
+
 
 
 
