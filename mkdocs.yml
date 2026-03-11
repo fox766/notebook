@@ -60,6 +60,7 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.tasklist
 
 
 extra:
@@ -113,6 +114,9 @@ nav:
       - cs61A/lec34.md
     - cs61B:
       - cs61B/index.md
+    - Computer Network:
+      - com&net/index.md
+      - com&net/lec1.md
   - Energy Engineering:
     - 暖通空调:
       - air-cond/index.md
