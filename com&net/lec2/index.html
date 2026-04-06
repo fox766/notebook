@@ -1,0 +1,3962 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://fox766.github.io/notebook/com%26net/lec2/">
+      
+      
+        <link rel="prev" href="../lec1/">
+      
+      
+        <link rel="next" href="../../air-cond/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>第2章 应用层 - fox766's note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic+Relief:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Comic Relief";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/timeline.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/css/timelinecard.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/css/md.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#2" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="fox766&#39;s note" class="md-header__button md-logo" aria-label="fox766's note" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            fox766's note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第2章 应用层
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fox766/notebook" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fox766/notebook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../cs61A/" class="md-tabs__link">
+          
+  
+  
+  CS
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../air-cond/" class="md-tabs__link">
+          
+  
+  
+  Energy Engineering
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="fox766&#39;s note" class="md-nav__button md-logo" aria-label="fox766's note" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    fox766's note
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fox766/notebook" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fox766/notebook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    更新记录
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            CS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    cs61A
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            cs61A
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    cs61A
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Function
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Higher Order Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Function Example
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tree Recursion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Abstraction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trees
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mutable Values
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mutable Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Iterations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inheritance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Representation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Composition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Efficiency
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Decomposition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Example
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ethical AI &amp; Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scheme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec28/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exception
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Calculator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interpreters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Declaring Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec33/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aggregation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    cs61B
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            cs61B
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Computer Network
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Network
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Computer Network
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lec1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第1章：概论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第2章 应用层
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第2章 应用层
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用层协议原理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="应用层协议原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络应用的体系结构
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网络应用的体系结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-cs" class="md-nav__link">
+    <span class="md-ellipsis">
+      客户-服务器（C/S）体系结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p2p" class="md-nav__link">
+    <span class="md-ellipsis">
+      对等体（P2P）体系结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csp2p" class="md-nav__link">
+    <span class="md-ellipsis">
+      C/S和P2P体系结构的混合体
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      进程通信
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      分布式进程通信需要解决的问题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web &amp;&amp; HTTP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web &amp;&amp; HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      一些术语
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP概况
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP连接
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP连接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httphttp10" class="md-nav__link">
+    <span class="md-ellipsis">
+      非持久HTTP（HTTP/1.0使用）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      响应时间模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      持久HTTP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP请求报文
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP请求报文">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      提交表单输入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法类型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP响应报文
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP响应报文">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP响应状态码
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      用户-服务器状态：cookies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web缓存（代理服务器）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional GET
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      FTP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ftp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      FTP: 控制连接与数据连接分开
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ftp_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      FTP命令、响应
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email" class="md-nav__link">
+    <span class="md-ellipsis">
+      电子邮件（EMail）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="电子邮件（EMail）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smtp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SMTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      邮件报文格式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="邮件报文格式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      报文格式的拓展
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      ”第三跳“
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="”第三跳“">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pop3" class="md-nav__link">
+    <span class="md-ellipsis">
+      POP3（包含两个阶段）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imap" class="md-nav__link">
+    <span class="md-ellipsis">
+      IMAP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dnsdomain-name-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS（Domain Name System）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DNS（Domain Name System）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      需要解决的问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS的总体思路和目标
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1dnsthe-dns-name-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题1：DNS名字空间（The DNS Name Space）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题1：DNS名字空间（The DNS Name Space）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS：根名字服务器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-name-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题2：解析问题-名字服务器（Name Server）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题2：解析问题-名字服务器（Name Server）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tld" class="md-nav__link">
+    <span class="md-ellipsis">
+      TLD服务器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      区域名字服务器维护资源记录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS工作过程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-name-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Name Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      名字解析过程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      递归查询
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      迭代查询
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS协议、报文
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题3：维护问题，新增一个域
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      攻击DNS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p2p_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      P2P应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="P2P应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件分发的案例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p2p_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      P2P的分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p2pbittorrent" class="md-nav__link">
+    <span class="md-ellipsis">
+      P2P文件分发：BitTorrent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p2pdistributed-hash-table-dht" class="md-nav__link">
+    <span class="md-ellipsis">
+      结构化P2P（Distributed Hash Table (DHT)）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      CDN
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CDN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      多媒体：视频
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      存储视频的流化服务
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="存储视频的流化服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dash" class="md-nav__link">
+    <span class="md-ellipsis">
+      DASH
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-distribution-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Distribution Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cdn_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      CDN：“简单”内容访问场景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netflix" class="md-nav__link">
+    <span class="md-ellipsis">
+      案例学习：Netflix（网飞）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP套接字编程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP套接字编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#socket" class="md-nav__link">
+    <span class="md-ellipsis">
+      socket回顾
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP套接字编程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据结构
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sockaddr_in" class="md-nav__link">
+    <span class="md-ellipsis">
+      sockaddr_in
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hostent" class="md-nav__link">
+    <span class="md-ellipsis">
+      hostent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      一个案例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      UDP套接字编程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UDP套接字编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      一个案例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Energy Engineering
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Energy Engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    暖通空调
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            暖通空调
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../air-cond/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    暖通空调
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../air-cond/test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    小测
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../air-cond/lec1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    绪论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../air-cond/lec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    热湿负荷
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../air-cond/lec3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    空气调节
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      应用层协议原理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="应用层协议原理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络应用的体系结构
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网络应用的体系结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-cs" class="md-nav__link">
+    <span class="md-ellipsis">
+      客户-服务器（C/S）体系结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p2p" class="md-nav__link">
+    <span class="md-ellipsis">
+      对等体（P2P）体系结构
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csp2p" class="md-nav__link">
+    <span class="md-ellipsis">
+      C/S和P2P体系结构的混合体
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      进程通信
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      分布式进程通信需要解决的问题
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web &amp;&amp; HTTP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web &amp;&amp; HTTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      一些术语
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP概况
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP连接
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP连接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#httphttp10" class="md-nav__link">
+    <span class="md-ellipsis">
+      非持久HTTP（HTTP/1.0使用）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      响应时间模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      持久HTTP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP请求报文
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP请求报文">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      提交表单输入
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法类型
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#http_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP响应报文
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP响应报文">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTP响应状态码
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-cookies" class="md-nav__link">
+    <span class="md-ellipsis">
+      用户-服务器状态：cookies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web缓存（代理服务器）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-get" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional GET
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      FTP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FTP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ftp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      FTP: 控制连接与数据连接分开
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ftp_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      FTP命令、响应
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#email" class="md-nav__link">
+    <span class="md-ellipsis">
+      电子邮件（EMail）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="电子邮件（EMail）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#smtp" class="md-nav__link">
+    <span class="md-ellipsis">
+      SMTP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      邮件报文格式
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="邮件报文格式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      报文格式的拓展
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      ”第三跳“
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="”第三跳“">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pop3" class="md-nav__link">
+    <span class="md-ellipsis">
+      POP3（包含两个阶段）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#imap" class="md-nav__link">
+    <span class="md-ellipsis">
+      IMAP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dnsdomain-name-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS（Domain Name System）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DNS（Domain Name System）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      需要解决的问题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS的总体思路和目标
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1dnsthe-dns-name-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题1：DNS名字空间（The DNS Name Space）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题1：DNS名字空间（The DNS Name Space）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS：根名字服务器
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-name-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题2：解析问题-名字服务器（Name Server）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="问题2：解析问题-名字服务器（Name Server）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tld" class="md-nav__link">
+    <span class="md-ellipsis">
+      TLD服务器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      区域名字服务器维护资源记录
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS工作过程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-name-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Name Server
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      名字解析过程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      递归查询
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      迭代查询
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      DNS协议、报文
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      问题3：维护问题，新增一个域
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dns_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      攻击DNS
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#p2p_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      P2P应用
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="P2P应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件分发的案例
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p2p_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      P2P的分类
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p2pbittorrent" class="md-nav__link">
+    <span class="md-ellipsis">
+      P2P文件分发：BitTorrent
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p2pdistributed-hash-table-dht" class="md-nav__link">
+    <span class="md-ellipsis">
+      结构化P2P（Distributed Hash Table (DHT)）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cdn" class="md-nav__link">
+    <span class="md-ellipsis">
+      CDN
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CDN">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      多媒体：视频
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      存储视频的流化服务
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="存储视频的流化服务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dash" class="md-nav__link">
+    <span class="md-ellipsis">
+      DASH
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#content-distribution-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Content Distribution Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cdn_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      CDN：“简单”内容访问场景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#netflix" class="md-nav__link">
+    <span class="md-ellipsis">
+      案例学习：Netflix（网飞）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP套接字编程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP套接字编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#socket" class="md-nav__link">
+    <span class="md-ellipsis">
+      socket回顾
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP套接字编程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据结构
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据结构">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sockaddr_in" class="md-nav__link">
+    <span class="md-ellipsis">
+      sockaddr_in
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hostent" class="md-nav__link">
+    <span class="md-ellipsis">
+      hostent
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      一个案例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#udp" class="md-nav__link">
+    <span class="md-ellipsis">
+      UDP套接字编程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UDP套接字编程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      一个案例
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+  
+  
+
+
+<h1 id="2">第2章 应用层</h1>
+<h2 id="_1">应用层协议原理</h2>
+<h3 id="_2">网络应用的体系结构</h3>
+<h4 id="-cs">客户-服务器（C/S）体系结构</h4>
+<p><img alt="network_pic40" src="../../assets/com%26net/network_pic40.png" /></p>
+<p>服务器：一直运行，比客户端先运行，IP地址是固定的，守候在知名端口上。</p>
+<p>客户端：主动与服务器通信，可能是动态IP地址，与互联网有间歇性的连接，不直接与其他客户端通信。</p>
+<p>服务器是中心，资源在服务器，服务器与客户端地位不平等；可扩展性差，可靠性差。</p>
+<h4 id="p2p">对等体（P2P）体系结构</h4>
+<p><img alt="network_pic41" src="../../assets/com%26net/network_pic41.png" /></p>
+<p>任意端系统之间可以进行通信，每个节点既请求别的节点的服务（是服务器），又根据它具有的资源为其他节点提供服务（是客户端）；自扩展性：新peer节点带来新的服务能力，当然也带来新的服务请求；几乎没有一直运行的服务器；参与的主机间歇性连接且可以改变ip地址。</p>
+<p>管理比较困难，只有节点上线才能提供服务，需要知道上线下线情况。</p>
+<h4 id="csp2p">C/S和P2P体系结构的混合体</h4>
+<p>Napster：</p>
+<ul>
+<li>文件搜索：集中</li>
+<li>主机向中心服务器上注册其资源</li>
+<li>主机向中心服务器查询资源位置</li>
+<li>文件传输：P2P</li>
+<li>任意peer节点之间</li>
+</ul>
+<p>即时通信：</p>
+<ul>
+<li>在线检测：集中</li>
+<li>当用户上线时，向中心服务器注册其ip地址</li>
+<li>用户与中心服务器联系，以找到其在线好友的位置</li>
+<li>两个用户之间的聊天：P2P</li>
+</ul>
+<h3 id="_3">进程通信</h3>
+<p>进程：在主机上运行的应用程序。</p>
+<p>在同一个主机内，使用进程间通信机制通信（操作系统定义）；在不同主机，通过报文（Message）来通信：使用OS提供的通信服务，按照应用协议来交换报文（借助传输层提供的服务）。</p>
+<p>客户端进程是发起通信的进程，服务器进程是等待连接的进程，P2P的应用也有这种分别。</p>
+<h3 id="_4">分布式进程通信需要解决的问题</h3>
+<blockquote>
+<p>问题1：进程标示和寻址问题（服务用户，标志自己的不同和自己的地址）</p>
+</blockquote>
+<p>进程为了接收报文，必须有一个标识即：SAP（发送也需要标示）</p>
+<p>三个要素：1.主机：唯一的32位IP地址（但仅ip地址不能唯一标志一个进程）；2.所采用的传输层协议：TCP或UDP；3.端口号（Port Numbers）</p>
+<p>知名端口号，HTTP：TCP 80</p>
+<p>一个进程由ip地址和端口号来标示，tcp和udp的端口的标示空间不同。</p>
+<p>本质上，一对主机进程之间的通信由两个端节点（end point）构成。</p>
+<blockquote>
+<p>问题2：传输层-应用层提供服务是如何（服务的地点（SAP）与形式（API））</p>
+</blockquote>
+<p><strong>需要穿过层间的信息</strong></p>
+<p>层间接口必须要携带的信息：</p>
+<ol>
+<li>要传输的报文（对于本层来说：SDU）</li>
+<li>谁传的：对方的应用进程的标示：IP+TCP(UDP)  端口</li>
+<li>传给谁：对方的应用进程的标示：对方的IP+TCP(UDP)端口号</li>
+</ol>
+<p>传输层实体（tcp或者udp实体）根据这些信息进行TCP报文段（UDP数据报）的封装</p>
+<p><strong>层间信息的代表</strong></p>
+<p>socket：用个代号标示通信的双方或者单方，就像OS打开文件返回的句柄一样。</p>
+<p><strong>TCP socket（TCP上的套接字）</strong></p>
+<p>是一个整数，代表了一个4元组（源ip，源port，目标ip，目标port），具有本地意义（对方不知道，网络层及以下不知道），唯一指定了两个进程之间的会话关系。发送时根据这个socket查表可以获得对方的ip和port，接收时根据4元组找到socket，找到哪个应用进程创建了这个socket。</p>
+<p>TCP服务，两个进程之间的通信需要之前要建立连接，两个进程通信会持续一段时间，通信关系稳定，在建立连接时可以创建socket。</p>
+<p>简单，便于管理，同时减少层间传输的信息量。</p>
+<p><img alt="network_pic42" src="../../assets/com%26net/network_pic42.png" /></p>
+<p><img alt="network_pic43" src="../../assets/com%26net/network_pic43.png" /></p>
+<p><strong>UDP socket</strong></p>
+<p>UDP服务，每个报文都是独立传输的，哪怕前后的ip，port相同，前后报文可能传给不同的分布式进程。</p>
+<p>UDP socket：是一个代表本地ip与port的二元组（本地意义上的，UDP套接字指定了应用所在的一个端节点[end point]），目的是使得穿过层间的信息量最小，但是在传输报文时，还必须提供对方的ip和port。</p>
+<p><img alt="network_pic44" src="../../assets/com%26net/network_pic44.png" /></p>
+<p>socket &lt;-&gt; 门户</p>
+<p><img alt="network_pic45" src="../../assets/com%26net/network_pic45.png" /></p>
+<blockquote>
+<p>问题3：如何使用传输层提供的服务，实现应用进程之间的报文交换，实现应用（用户使用服务，协议）</p>
+</blockquote>
+<p><strong>应用层协议</strong></p>
+<p>有公开的，也有私有的，规定了报文格式，解释，时序，应用协议仅仅是应用的一个组成部分。</p>
+<p><strong>衡量应用层提供服务的标准</strong></p>
+<p>数据丢失率、延迟、吞吐、安全性。</p>
+<p><strong>TCP</strong></p>
+<p>可靠，流量控制（发送方不会淹没接受方），拥塞控制（当网络出现拥塞时，能抑制发送方），不能提供的服务（时间保证、最小吞吐保证和安全），面向连接（要求在客户端进程和服务器进程之间建立连接）。</p>
+<p><strong>UDP</strong></p>
+<p>不可靠数据传输，不提供的服务（可靠，流量控制、拥塞控制、时间、带宽保证、建立连接）</p>
+<p><strong>UDP存在的必要性</strong></p>
+<ul>
+<li>能够区分不同进程，在ip提供的主机端到端功能的基础上；</li>
+<li>不需建立连接，适合事务性应用</li>
+<li>不做可靠性工作，检错重发需要时空代价；</li>
+<li>没有拥塞和流量控制，应用能够按照设定的速度发送数据（在TCP上的应用，应用发送数据的速度和主机向网络发送的实际速度是不一致的）</li>
+</ul>
+<p>有的实时多媒体跑在TCP之上，有些机构接入网络的防火墙会把UDP分组过滤掉。</p>
+<p><strong>TCP&amp;&amp;UDP</strong></p>
+<p>都没有加密，明文通过互联网传输，甚至密码</p>
+<p><strong>SSL</strong></p>
+<p><img alt="network_pic46" src="../../assets/com%26net/network_pic46.png" /> </p>
+<p>SSL在TCP上实现，运行在应用层，应用层采用SSL的库，SSL库使用TCP通信，https跑在SSL之上。</p>
+<h2 id="web-http">Web &amp;&amp; HTTP</h2>
+<h3 id="_5">一些术语</h3>
+<p>Web页：由一些对象组成</p>
+<p>对象：可以是HTML文件，JPEG图像，Java小程序、声音剪辑文件等</p>
+<p>Web页含有一个基本的HTML文件，该文件又包含若干对象的引用（链接）</p>
+<p>通过URL对每个对象进行引用：访问协议，用户名，口令字，端口等。</p>
+<p>URL格式：<img alt="network_pic47" src="../../assets/com%26net/network_pic47.png" /></p>
+<h3 id="http">HTTP概况</h3>
+<p>超文本：文本之间任意的指向关系。</p>
+<p>HTTP：超文本传输协议，应用层协议。</p>
+<p><img alt="network_pic48" src="../../assets/com%26net/network_pic48.png" /></p>
+<p>使用TCP：客户发起一个与服务器的TCP连接(建立套接字) ，端口号为80，服务器接受客户的TCP连接，在浏览器(HTTP客户端)与Web服务器(HTTP服务器server)交换HTTP 报文(应用层协议报文) ，TCP连接关闭；</p>
+<p>HTTP：是无状态的，服务器并不维护关于客户的任何信息。（维护状态的协议很复杂，需要维护历史信息，保证服务器和客户端之间信息的一致，因此无状态的服务器能够支持更多的客户端）</p>
+<h3 id="http_1">HTTP连接</h3>
+<h4 id="httphttp10">非持久HTTP（HTTP/1.0使用）</h4>
+<p>最多只有一个对象在TCP连接上发送，下载多个对象需要多个TCP连接。</p>
+<p><img alt="network_pic49" src="../../assets/com%26net/network_pic49.png" /></p>
+<p>缺点：每个对象要2个RTT（概念见下），操作系统必须为每个TCP连接分配资源，但浏览器通常打开并行TCP连接以获取引用对象。</p>
+<h4 id="_6">响应时间模型</h4>
+<p>往返时间RTT（round-trip-time）：一个小的分组从客户端到服务器，再到客户端的时间（传输时间忽略）。</p>
+<p>响应时间：2RTT+传输时间。</p>
+<p><img alt="network_pic50" src="../../assets/com%26net/network_pic50.png" /></p>
+<h4 id="http_2">持久HTTP</h4>
+<p>服务器在发送响应后，仍保持TCP连接，在相同客户端和服务器之间的后续请求和响应报文通过相同的连接进行传送，客户端在遇到一个引用对象的时候，就可以尽快发送该对象的请求。</p>
+<p>持久HTTP又可以分为以下两种类型：</p>
+<ul>
+<li>非流水方式的持久HTTP：客户端只能在收到前一个响应后才能发出新的请求。每个引用对象花费一个RTT。</li>
+<li>流水方式的持久HTTP：HTTP/1.1的默认模式，客户端遇到一个引用请求就立即产生一个请求，所有引用（小）对象只花费一个RTT是有可能的。</li>
+</ul>
+<h3 id="http_3">HTTP请求报文</h3>
+<p>ASCII码可读的。</p>
+<p><img alt="network_pic51" src="../../assets/com%26net/network_pic51.png" /></p>
+<p>GET从服务器请求，POST上载，HEAD取出html文件的头（搜索引擎拿到头可以建索引）</p>
+<p>HOST：主机名</p>
+<p>User-agent：用户代理的程序，浏览器</p>
+<p>Connection：close代表请求对象回来使得连接关闭，1.1默认是维护连接的。</p>
+<p>通用格式：<img alt="network_pic52" src="../../assets/com%26net/network_pic52.png" /></p>
+<h4 id="_7">提交表单输入</h4>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> POST方式：网页通常包括表单输入，包含在实体主体(entity body )中的输入被提交到服务器。</li>
+<li class="task-list-item"><input type="checkbox" disabled/> URL方式：GETmethod，输入通过请求行的url字段上载。</li>
+</ul>
+<p>URL方式的例子：<img alt="network_pic53" src="../../assets/com%26net/network_pic53.png" /></p>
+<h4 id="_8">方法类型</h4>
+<p>HTTP/1.0：</p>
+<p>GET、POST、HEAD</p>
+<p>HTTP/1.1：</p>
+<p>GET、POST、HEAD</p>
+<p>PUT：将实体主体中的文件上载到URL字段规定的路径</p>
+<p>DELETE：删除URL字段规定的文件</p>
+<p>PUT（上载对象）和DELETE（删除对象）往往是网络管理员管理网页向服务器发送的命令</p>
+<h3 id="http_4">HTTP响应报文</h3>
+<p><img alt="network_pic54" src="../../assets/com%26net/network_pic54.png" /></p>
+<p>Server：服务器</p>
+<p>Last-Modified：返回对象的最后一次修改时间，相当于一个版本号</p>
+<p>tcp向上提供的是一个字节流的服务（bite stream），采用tcp这样的应用层协议，得自己维护报文和报文的界限（例如服务器传下来两个15k字节，tcp向上交给客户端可能就是一个30k字节），Content_Length就告诉对方应用实体后面还需读取多少字节的内容。</p>
+<h4 id="http_5">HTTP响应状态码</h4>
+<p>位于服务器向客户端发出的响应报文中的首行。</p>
+<p><img alt="network_pic55" src="../../assets/com%26net/network_pic55.png" /></p>
+<h3 id="-cookies">用户-服务器状态：cookies</h3>
+<p>http是无状态的协议，通过cookie能维护服务器与客户端之间的状态。</p>
+<p>cookie的4个组成部分：</p>
+<ul>
+<li>在HTTP响应报文中有一个cookie的首部行。</li>
+<li>在HTTP请求报文含有一个cookie的首部行。</li>
+<li>在用户端系统中保留有一个cookie文件，由用户的浏览器管理。</li>
+<li>在Web站点有一个后端数据库。</li>
+</ul>
+<p><img alt="network_pic56" src="../../assets/com%26net/network_pic56.png" /></p>
+<p>cookie能带来什么：用户验证、购物车、推荐、用户状态。</p>
+<p>Cookies允许站点知道许多关于用户的信息，可能将它知道的东西卖给第三方。</p>
+<p>使用重定向和cookie的搜索引擎还能知道用户更多的信息（如通过某个用户在大量站点上的行为，了解其个人浏览方式的大致模式），广告公司从站点获得信息。</p>
+<h3 id="web">Web缓存（代理服务器）</h3>
+<p>目的：不访问原始服务器，就满足客户的需求。</p>
+<p>用户设置浏览器：通过缓存访问Web，浏览器将所有的HTTP请求发给缓存（<u>对象在缓存中</u>（hit），缓存直接返回对象；对象不在缓存中，缓存请求<u>原始服务器</u>（original），然后再将对象返回客户端）。</p>
+<p><img alt="network_pic57" src="../../assets/com%26net/network_pic57.png" /></p>
+<p>缓存既是客户端又是服务器，通常缓存是由ISP安装。</p>
+<p>缓存能降低客户端的请求响应时间，可以大大减少一个机构内部网络与Internent接入链路上的流量，互联网大量采用了缓存：可以使较弱的ICP也能够有效提供内容。</p>
+<p><strong>缓存例子：</strong></p>
+<p><img alt="network_pic58" src="../../assets/com%26net/network_pic58.png" /></p>
+<p>~~解决方法1：更宽的接入链路~~</p>
+<p><img alt="network_pic59" src="../../assets/com%26net/network_pic59.png" /></p>
+<p>解决方法2：安装缓存</p>
+<p>排队延迟=L/R * i/(1-i)，i为接入带宽利用率</p>
+<p><img alt="network_pic60" src="../../assets/com%26net/network_pic60.png" /></p>
+<h3 id="conditional-get">Conditional GET</h3>
+<p>目标：如果缓存器中的对象拷贝是最新的，就不要发送对象。</p>
+<p>缓存器: 在HTTP请求中指定缓存拷贝的日期 <code>If-modified-since: &lt;date&gt;</code></p>
+<p>服务器: 如果缓存拷贝陈旧，则响应报文没包含对象: HTTP/1.0 304 Not Modified</p>
+<p><img alt="network_pic61" src="../../assets/com%26net/network_pic61.png" /></p>
+<h2 id="ftp">FTP</h2>
+<p><img alt="network_pic62" src="../../assets/com%26net/network_pic62.png" /></p>
+<p>C/S模式</p>
+<p>ftp服务器：端口号为21</p>
+<h3 id="ftp_1">FTP: 控制连接与数据连接分开</h3>
+<ol>
+<li>
+<p>FTP客户端与FTP服务器通过端口21联系，并使用TCP为传输协议；</p>
+</li>
+<li>
+<p>客户端通过控制连接获得身份确认；</p>
+</li>
+<li>
+<p>客户端通过控制连接发送命令浏览远程目录；</p>
+</li>
+<li>
+<p>收到一个文件传输命令时，<strong>服务器打开一个到客户端的数据连接（服务器向客户端发送连接请求）</strong>，运行在TCP的port 20；</p>
+</li>
+<li>
+<p>一个文件传输完成后，服务器关闭连接。</p>
+</li>
+</ol>
+<p>控制连接又称为带外（out of band）传送，数据连接是带内的。</p>
+<p>FTP协议是有状态的协议：FTP服务器维护用户的状态信息（当前路径、用户帐户与控制连接对应）。</p>
+<h3 id="ftp_2">FTP命令、响应</h3>
+<p><img alt="network_pic63" src="../../assets/com%26net/network_pic63.png" /></p>
+<h2 id="email">电子邮件（EMail）</h2>
+<p><img alt="network_pic64" src="../../assets/com%26net/network_pic64.png" /></p>
+<p>3个组成部分：用户代理、邮件服务器、简单邮件传输协议SMTP。</p>
+<p>用户代理：又名邮件阅读器，撰写、编辑和阅读邮件，如Outlook、Foxmail，输出和输入邮件保存在服务器上。</p>
+<p>邮件服务器：邮箱中管理和维护发送给用户的邮件，输出报文队列保持待发送邮件报文。</p>
+<p>发送的时候用户代理发送给邮件服务器（SMTP），邮件服务器发送给目标邮件服务器（SMTP），用户代理通过存取协议从邮件服务器中的用户邮箱中拉取相应的内容。</p>
+<h3 id="smtp">SMTP</h3>
+<p>使用TCP在客户端和服务器之间传送报文，端口号为25。直接从发送方服务器传输到接收方服务器。传输有三个阶段：握手，传输报文，关闭。命令为ASCII文本，相应包含状态码和状态信息。报文必须为7位ASCII码。</p>
+<p><img alt="network_pic65" src="../../assets/com%26net/network_pic65.png" /></p>
+<p>SMTP使用持久连接（一次连接中，所有的邮件都传完后才关闭连接），SMTP服务器使用CRLF.CRLF决定报文的尾部。</p>
+<p>与HTTP比较：</p>
+<ol>
+<li>HTTP是拉的（pull），SMTP是推的（push）。</li>
+<li>命令、相应交互、状态码都是ASCII的形式。</li>
+<li>HTTP中每个对象封装在各自的相应报文中，SMTP中多个对象包含在一个报文中。</li>
+</ol>
+<h3 id="_9">邮件报文格式</h3>
+<p>首部行：To，From，Subject...</p>
+<p>主体：报文，只能是ASCII。</p>
+<p><img alt="network_pic66" src="../../assets/com%26net/network_pic66.png" /></p>
+<h4 id="_10">报文格式的拓展</h4>
+<p>MIME：多媒体邮件扩展（multimedia mail extension），在报文首部用额外的行申明MIME内容类型。</p>
+<p><img alt="network_pic67" src="../../assets/com%26net/network_pic67.png" /></p>
+<p>采用base64等编码手段可以ASCII的形式传送中文，可执行文件等，收件方再进行解码即可。</p>
+<h3 id="_11">”第三跳“</h3>
+<p>邮件第三跳中采用拉的协议，有POP3，IMAP，HTTP。</p>
+<p>POP：邮局访问协议，用户身份确认(代理&lt;--&gt;服务器) 并下载</p>
+<p>IMAP：Internet邮件访问协议，比POP具有更多特性、更复杂（如远程目录的维护...），在服务器上处理存储的报文。</p>
+<p>HTTP：方便，Hotmail , Yahoo! Mail等。</p>
+<h4 id="pop3">POP3（包含两个阶段）</h4>
+<p><img alt="network_pic68" src="../../assets/com%26net/network_pic68.png" /></p>
+<p>下载并删除模式，如果改变客户机将不能阅读邮件，下载并保留则仍然可以，因为邮件仍然在邮箱中。</p>
+<p>POP3在会话中是无状态的。</p>
+<h4 id="imap">IMAP</h4>
+<p>IMAP服务器将每个报文与一个文件夹联系起来，允许用户用目录来组织报文，允许用户读取报文组件。</p>
+<p>IMAP在会话中保留用户状态（目录名、报文ID与目录名之间映射）。</p>
+<h2 id="dnsdomain-name-system">DNS（Domain Name System）</h2>
+<p>IP地址用于标示和寻址，ipv4是4个字节，ipv6是16个字节，但是IP地址不好记忆。</p>
+<p>由DNS负责将域名转换成二进制地网络地址。</p>
+<h3 id="_12">需要解决的问题</h3>
+<ol>
+<li>如何命名设备，同时需要解决一个重名的问题？（层次化命名）</li>
+<li>如何完成名字到IP地址的转换？（分布式数据库维护）</li>
+<li>如何进行维护：增删一个域，需要在域名系统中做哪些工作？</li>
+</ol>
+<h3 id="dns">DNS的总体思路和目标</h3>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> 主要思路：</li>
+<li>分层的、基于域的命名机制</li>
+<li>若干分布式的数据库完成名字到IP地址的转换</li>
+<li>运行在UDP之上的53号端口的应用服务</li>
+<li>
+<p>互联网的核心功能，但是是在网络边缘中的应用层实现的</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled/> 主要目标：</p>
+</li>
+<li>实现主机名-IP地址的转换（name/IP translate）</li>
+<li>主机别名（方便用户访问，www.baidu.com）到规范名字（便于管理，xx西海岸xx机房xx服务器）的转换：Host aliasing</li>
+<li>邮件服务器别名到邮件服务器的正规名字的转换：Mail server aliasing</li>
+<li>负载均衡：Load Distribution</li>
+</ul>
+<h3 id="1dnsthe-dns-name-space">问题1：DNS名字空间（The DNS Name Space）</h3>
+<p>Internet根被划为几百个顶级域（top lever domains）：</p>
+<ul>
+<li>通用的（generic）：.com; .edu; .gov; .int; .mil; .net; .org; .firm; .hsop; .web; .arts; .rec;</li>
+<li>国家的（countries）：.cn; .us; .nl; .jp</li>
+</ul>
+<p>每个（子）域下面可划分为若干子域（subdomains），像一颗倒着生长的树，树叶是主机。</p>
+<h4 id="dns_1">DNS：根名字服务器</h4>
+<p><img alt="network_pic70" src="../../assets/com%26net/network_pic70.png" /></p>
+<p><img alt="network_pic71" src="../../assets/com%26net/network_pic71.png" /></p>
+<p>子域的命名由其上的顶级域来决定，一个域管理其下的子域，创建一个新的域，必须征得它所属域的同意。</p>
+<p>主机的域名：从树叶开始往上走，直到树根，中间用逗点隔开；</p>
+<p>域的域名：从树枝开始往上走，直到树根，中间用逗点隔开。</p>
+<p>域与物理网络无关：域遵从组织界限，而不是物理网络（一个域的主机可以不在一个网络，一个网络的主机不一定在一个域）；域的划分是逻辑的，而不是物理的。</p>
+<h3 id="2-name-server">问题2：解析问题-名字服务器（Name Server）</h3>
+<p>单个名字服务器会存在诸多问题。</p>
+<p>区域的划分有区域管理者自己决定，将DNS名字空间划分为互不相交的区域，每个区域都是树的一部分。</p>
+<p>名字服务器：每个区域都有一个名字服务器，维护着它所管辖区域的权威信息(authoritative record)；名字服务器允许被放置在区域之外，以保障可靠性。</p>
+<p>权威DNS服务器：组织机构的DNS服务器，提供组织机构服务器（如Web和mail）可访问的主机和IP之间的映射；组织机构可以选择实现自己维护或由某个服务提供商来维护。</p>
+<p><img alt="network_pic72" src="../../assets/com%26net/network_pic72.png" /></p>
+<h4 id="tld">TLD服务器</h4>
+<p>顶级域(TLD)服务器：负责顶级域名（如com, org, net, edu和gov）和所有国家级的顶级域名（如cn, uk, fr, ca, jp ）</p>
+<p>Network solutions 公司维护com TLD服务器，Educause公司维护edu TLD服务器。</p>
+<h4 id="_13">区域名字服务器维护资源记录</h4>
+<ul>
+<li>资源记录（resource records）：维护域名-IP地址(其它)的映射关系，位于Name Server的分布式数据库中。</li>
+<li>RR格式：(domain_name, ttl, type,class,Value)</li>
+<li>Domain_name: 域名</li>
+<li>Ttl: time to live : 生存时间(权威记录永久，缓冲记录有限一般2天)，储存缓存记录是为了方便查询，删除缓存记录为了保持一致性（服务器可能更改ip）</li>
+<li>Class 类别：对于Internet，值为IN，对于别的网络可能不为IN</li>
+<li>Value 值：可以是数字，域名或ASCII串</li>
+<li>Type 类别：资源记录的类型，具体见下</li>
+</ul>
+<p><strong>Type：</strong></p>
+<p>Type=A：Name为主机（域名），Value为IP地址；</p>
+<p>Type=CNAME：Name为规范名字的别名（www.ibm.com 的规范名字为 servereast.backup2.ibm.com），Value为规范名字；</p>
+<p>Type=MX：Name为邮件服务器的别名，Value为别名对应的规范名字；</p>
+<p>Type=NS：Name为子域的名字，Value为权威名字服务器的域名。</p>
+<p>所以说，上层要知道下层域的信息需要两条资源记录，一条Type=NS，另一条Type=A。</p>
+<h4 id="dns_2">DNS工作过程</h4>
+<p>一台设备想要上网，必须具备以下4个信息：ip地址，子网掩码，default gateway（发向子网外的分组）以及name server，这几个信息自动配或者手工配。</p>
+<p>大致工作过程如下：应用调用解析器（resolver），解析器作为客户向name server发出查询报文（封装在UDP段中），name server返回响应报文（name/ip）。</p>
+<p><img alt="network_pic73" src="../../assets/com%26net/network_pic73.png" /></p>
+<h4 id="local-name-server">Local Name Server</h4>
+<p>上述过程用户可以指定任何一个name server作为name server，但一般指定一个比较近的作为名字服务器（同一个子网内，传输快），因此称为local name server。</p>
+<p>local name server并不严格属于层次结构，每个ISP都有一个本地DNS服务器（也称为“默认名字服务器”），当一个主机发起一个DNS查询时，查询被送到其本地DNS服务器（起着代理的作用，将查询转发到层次结构中）</p>
+<h4 id="_14">名字解析过程</h4>
+<p>（1）目标名字在local name server中（查询的名字在该区域内部 or cashing）</p>
+<p>（2）当与本地名字服务器不能解析名字时，联系根名字服务器顺着<strong>根-TLD</strong>一直找到权威名字服务器。</p>
+<h4 id="_15">递归查询</h4>
+<p>名字解析负担都放在当前联络的名字服务器上，但是根服务器的负担太重（可以采用迭代查询）。</p>
+<p><img alt="network_pic74" src="../../assets/com%26net/network_pic74.png" /></p>
+<h4 id="_16">迭代查询</h4>
+<p>例如，主机cis.poly.edu想知道主机gaia.cs.umass.edu的IP地址，根（及各级域名）服务器返回的不是查询结果，而是下一个DNS的地址，最后由权威名字服务器给出解析结果。</p>
+<p><img alt="network_pic75" src="../../assets/com%26net/network_pic75.png" /></p>
+<h4 id="dns_3">DNS协议、报文</h4>
+<p>DNS协议：查询和响应报文的报文格式相同。</p>
+<p><img alt="network_pic76" src="../../assets/com%26net/network_pic76.png" /></p>
+<p><img alt="network_pic77" src="../../assets/com%26net/network_pic77.png" /></p>
+<h3 id="3">问题3：维护问题，新增一个域</h3>
+<p>在上级域的名字服务器中增加两条记录，指向这个新增的子域的域名和域名服务器的地址（Type=NS，Type=A[名字服务器]）；在新增子域的名字服务器上运行名字服务器（需包含Type=A[新增子域]的资源记录），负责本域的名字解析：名字-&gt;IP地址。</p>
+<p>删改也是如此。</p>
+<h3 id="dns_4">攻击DNS</h3>
+<p>总的来说，DNS比较健壮。</p>
+<p>DDos攻击、重定向攻击、利用DNS基础设施进行DDoS。</p>
+<h2 id="p2p_1">P2P应用</h2>
+<p>这里介绍的是一类应用，如文件分发（BitTorrent）、流媒体（KanKan）、VoIP（Skype，互联网电话）。</p>
+<h3 id="_17">文件分发的案例</h3>
+<blockquote>
+<p>从一台服务器分发文件（大小F）到N个peer需要多少时间？</p>
+</blockquote>
+<p><img alt="network_pic78" src="../../assets/com%26net/network_pic78.png" /></p>
+<p><strong>C/S模式：</strong></p>
+<p><img alt="network_pic79" src="../../assets/com%26net/network_pic79.png" /></p>
+<p><strong>P2P模式：</strong></p>
+<p><img alt="network_pic80" src="../../assets/com%26net/network_pic80.png" /></p>
+<p><img alt="network_pic81" src="../../assets/com%26net/network_pic81.png" /></p>
+<h3 id="p2p_2">P2P的分类</h3>
+<p>任意两个Peer节点形成一个邻居关系（边），称为overlay，覆盖网，是应用层上的逻辑的网络。</p>
+<p><strong>非结构化P2P：</strong>Peer节点形成的overlay是随意的。</p>
+<ul>
+<li>集中式目录：Napster，问题有若目录服务器故障；很多客户端请求查询；集中式目录服务器容易被定位，存在版权问题。</li>
+<li>完全分布式：Gnutella，所有的节点形成一个覆盖网络进行泛洪式的查询（flooding），可以通过设置ttl、使中转节点不多次转发同一节点的查询请求来限制泛洪。</li>
+<li><img alt="network_pic82" src="../../assets/com%26net/network_pic82.png" /></li>
+<li>覆盖网络建立：<ul>
+<li>新节点加入：下载软件后有一张死党列表（经常开机的对等方的IP），新的节点（源节点）向死党列表发出ping，收到ping的节点一方面向源节点发出pong，另一方面向与其连接的节点发出ping；如此往复下，源节点收到众多pong回复，选取若干个作为其邻居建立连接。</li>
+<li>节点删除：要退出节点的网络向与之连接的节点发出报文，与之连接的节点删除该连接并选取其他节点建立连接以满足连接强度要求。</li>
+</ul>
+</li>
+<li>混合体：KaZaA，每个对等体要么是一个组长，要么隶属于一个组长；组长之间是分布式（Gnutella），一个组之内是集中式的（Napster）。</li>
+<li><img alt="network_pic83" src="../../assets/com%26net/network_pic83.png" /></li>
+<li><img alt="network_pic84" src="../../assets/com%26net/network_pic84.png" /></li>
+<li><img alt="network_pic85" src="../../assets/com%26net/network_pic85.png" /></li>
+<li>查询时根据文件的描述进行匹配，然后把文件的哈希值作为唯一id来进行请求。</li>
+<li><img alt="network_pic89" src="../../assets/com%26net/network_pic89.png" /></li>
+</ul>
+<p><strong>DHT(结构化)P2P：</strong>overlay是有序的，可以形成环或树。</p>
+<h3 id="p2pbittorrent">P2P文件分发：BitTorrent</h3>
+<p><img alt="network_pic86" src="../../assets/com%26net/network_pic86.png" /></p>
+<p>文件被分为一个个块256kB，同时使用一个bitmap来记录节点是否具有每个256kB(例如bitmap中一个bit是1为具有，是0为不具有)。</p>
+<p><img alt="network_pic87" src="../../assets/com%26net/network_pic87.png" /></p>
+<p>Alice通过检索引擎匹配内容，下载相应的torrent文件，torrent文件中包含tracking server（跟踪服务器，管理哪些节点正在进行该文件的上下载），Alice向tracking server发送想要加入的信令，得到回复（peer节点列表），Alice加入洪流中称为吸血鬼，和部分peer节点构成邻居关系。</p>
+<p>请求块：Alice首先先随机获取其中四块，向其他节点提供服务；其后再请求洪流中稀缺的块。</p>
+<p>当peer下载时，该peer可以同时向其他节点提供上载服务。Peer可能会变换用于交换块的peer节点。peer节点可能会上线或者下线（扰动churn）。</p>
+<p>发送块：Alice向4个peer节点发送块，这些块向Alice提供最大带宽的服务。（其他peer被Alice阻塞，将不会从Alice处获得服务；Alice每10秒重新评估一次：选取为自己提供最大带宽服务的前4位）除此之外，每30秒Alice随机选择其他peer节点，向这个节点发送块。（称为“优化疏通”这个节点，新选择的节点可以加入这个top 4）。</p>
+<p>优化疏通的好处：tit-for-tat</p>
+<p><img alt="network_pic88" src="../../assets/com%26net/network_pic88.png" /></p>
+<p>当一个节点获取到文件的所有块时，它从吸血鬼变成了种子：它会（自私的）离开或者保留（利他主义）在torrent中。</p>
+<h3 id="p2pdistributed-hash-table-dht">结构化P2P（Distributed Hash Table (DHT)）</h3>
+<p>每个节点将其ip地址作一个hash，根据hash值和一定规则形成有序的拓扑（环...），对于文件也作一个hash，按照一定规则储存在某个节点。</p>
+<p>查询时，根据规则可以很快得到所需文件在何处。</p>
+<p>不需要很多的副本也能实现快速查询。</p>
+<h2 id="cdn">CDN</h2>
+<p>视频流量占据着互联网大部分的带宽，存在如下挑战：如何服务数量庞大的用户；用户具有异构性。</p>
+<h3 id="_18">多媒体：视频</h3>
+<p>视频是以固定速率显示的图像序列。</p>
+<p>网络视频的特点：高码率（10倍于音频，具有较高的网络带宽需求），可以被压缩，90%以上的网络流量是视频。</p>
+<p>数字化图像：像素的阵列，每个像素被若干bits表示。</p>
+<p>编码：使用图像内（空间）和图像间（时间）的冗余来降低编码的比特数。</p>
+<ul>
+<li>CBR（constant bit  rate）：以固定速率编码</li>
+<li>VBR（variable bit  rate）：视频编码速率随时间的变化而变化</li>
+</ul>
+<p><img alt="network_pic90" src="../../assets/com%26net/network_pic90.png" /></p>
+<h3 id="_19">存储视频的流化服务</h3>
+<p>由于缓冲区的存在，用户可以一边下载一边观看网络视频（播放器不断从缓冲区中提取并解析），play out delay很低。</p>
+<h4 id="dash">DASH</h4>
+<p>Dynamic, Adaptive Streaming over HTTP，流媒体播放协议</p>
+<p>服务器：</p>
+<ul>
+<li>将视频文件分割成多个块</li>
+<li>每个块独立存储，编码于不同码率（8-10种）</li>
+<li>告示文件（manifest file）: 提供不同块的信息以及URL</li>
+</ul>
+<p>客户端：</p>
+<ul>
+<li>先获取告示文件</li>
+<li>周期性地测量服务器到客户端的带宽</li>
+<li>查询告示文件，在一个时刻请求一个块，HTTP头部指定字节范围</li>
+<li>智能化的客户端可以有客户端自适应决定什么时候请求块，请求什么编码速率的块，去哪里请求块。</li>
+</ul>
+<h3 id="content-distribution-networks">Content Distribution Networks</h3>
+<blockquote>
+<p>服务器如何通过网络向上百万用户同时流化视频内容(上百万视频内容)？</p>
+</blockquote>
+<p>选择1：单个的、大的超级服务中心“mega-server”</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> 服务器到客户端跳数比较多，受到瓶颈链路的制约。</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 单点故障</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 二八定律决定了网络同时充斥着同一个视频的多个拷贝，效率低。</li>
+</ul>
+<p>综合来看，这种方式的可扩展性差。</p>
+<p>选择2：通过CDN，全网部署缓存节点，存储服务内容，就近为用户提供服务，提高用户体验</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> enter deep：将CDN服务器深入到许多接入网</li>
+<li>更接近用户，数量多，离用户近，管理困难</li>
+<li>Akamai</li>
+<li class="task-list-item"><input type="checkbox" disabled/> bring home：部署在少数(10个左右)关键位置，如将服务器簇安装于POP（接入点）附近（离若干1st ISP POP较近）</li>
+<li>采用租用线路将服务器簇连接起来</li>
+<li>Limelight</li>
+</ul>
+<p>在CDN节点中存储内容的多个拷贝，用户从CDN中请求内容，重定向请求内容。CDN的cache节点运行在应用层，网络边缘（<strong>Over The Top</strong>），互联网络主机-主机之间的通信作为一种服务（内容加速）向用户提供。</p>
+<p>OTT挑战：如何在在拥塞的互联网上复制内容（在不同条件下在哪个节点中获取内容，部署策略）</p>
+<h3 id="cdn_1">CDN：“简单”内容访问场景</h3>
+<p>Bob（客户端）请求视频<code>http://netcinema.com/6Y7B23V</code>，视频存储在CDN，位于<code>http://KingCDN.com/NetC6y&amp;B23V</code>。</p>
+<p>Bob先得到这个视频的url，询问local DNS；local DNS问到netcinema的权威名字服务器，获得一个重定向的url（CDN）；通过KingCDN的权威名字服务器，解析这个重定向的url，得到一个最佳的cache节点（CDN簇选择策略）的ip。</p>
+<h3 id="netflix">案例学习：Netflix（网飞）</h3>
+<p><img alt="network_pic91" src="../../assets/com%26net/network_pic91.png" /></p>
+<h2 id="tcp">TCP套接字编程</h2>
+<h3 id="socket">socket回顾</h3>
+<p>socket（套接字）：分布式应用进程之间的门，传输层协议提供的端到端服务接口。</p>
+<p><img alt="network_pic92" src="../../assets/com%26net/network_pic92.png" /></p>
+<p>socket编程：</p>
+<ul>
+<li>TCP：可靠的，字节流的服务，从一个进程向另一个进程可靠地传输字节流</li>
+<li>UDP：不可靠（数据UDP数据报）服务</li>
+</ul>
+<h3 id="tcp_1">TCP套接字编程</h3>
+<p>服务器首先运行，等待连接建立。</p>
+<p>1：服务器进程必须先处于运行状态</p>
+<ul>
+<li>创建欢迎socket（welcome socket）</li>
+<li>和本地端口捆绑</li>
+<li>在welcome socket上阻塞式等待接收用户的连接</li>
+</ul>
+<p>客户端主动和服务器建立连接。</p>
+<p>2：创建客户端本地套接字（隐式捆绑到客户端本地的port）</p>
+<ul>
+<li>指定服务器进程的IP地址和端口号，与服务器进程连接</li>
+</ul>
+<p>3：当与客户端连接请求到来时</p>
+<ul>
+<li>服务器接受来自用户端的请求，解除阻塞式等待，返回一个新的socket（与welcome socket不一样），与客户端通信</li>
+<li>允许服务器与多个客户端通信</li>
+<li>使用源IP和源端口来区分不同的客户端</li>
+</ul>
+<p>4：连接API调用有效时，客户端与服务器建立了TCP连接</p>
+<h3 id="_20">数据结构</h3>
+<h4 id="sockaddr_in">sockaddr_in</h4>
+<p>IP地址和port捆绑关系的数据结构（标示进程的端节点）</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">sockadrr_in</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="kt">short</span><span class="w"> </span><span class="n">sin_family</span><span class="p">;</span><span class="w"> </span><span class="c1">// AF_INET，地址簇，常数代表用于tcp ip的通信还是ipx的通信</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="n">u_short</span><span class="w"> </span><span class="n">sin_port</span><span class="p">;</span><span class="w"> </span><span class="c1">// port</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">in_addr</span><span class="w"> </span><span class="n">sin_addr</span><span class="p">;</span><span class="w"> </span><span class="c1">//IP address, unsigned long</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">sin_zero</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span><span class="w"> </span><span class="c1">// align</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<h4 id="hostent">hostent</h4>
+<p>域名和IP地址的数据结构</p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">hostent</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">h_name</span><span class="p">;</span><span class="w"> </span><span class="c1">// 指向主机的域名</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">h_aliases</span><span class="p">;</span><span class="w"> </span><span class="c1">// 指向一系列主机的别名</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">h_addrtype</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">h_length</span><span class="p">;</span><span class="w"> </span><span class="c1">// 地址长度</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">h_addr_list</span><span class="p">;</span><span class="w"> </span><span class="c1">// ip地址的列表,指向该主机的所有IP地址,通常我们取第一个使用。</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="cp">#define h_addr h_addr_list[0]; </span><span class="c1">// ip[0]</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>作为调用域名解析函数时的参数，返回后，将IP地址拷贝到sockaddr_in的IP地址部分。</p>
+<h3 id="_21">一个案例</h3>
+<p><img alt="network_pic93" src="../../assets/com%26net/network_pic93.png" /></p>
+<p><img alt="network_pic94" src="../../assets/com%26net/network_pic94.png" /></p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// client.c</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in</span><span class="w"> </span><span class="n">sad</span><span class="p">;</span><span class="w"> </span><span class="c1">// structure to hold an IP address of server</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">clientSocket</span><span class="p">;</span><span class="w"> </span><span class="c1">// socket descriptor</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">hostent</span><span class="w"> </span><span class="o">*</span><span class="n">ptrh</span><span class="p">;</span><span class="w"> </span><span class="c1">// pointer to a host table entry</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">Sentence</span><span class="p">[</span><span class="mi">128</span><span class="p">];</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">modifiedSentence</span><span class="p">[</span><span class="mi">128</span><span class="p">];</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="n">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="n">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="n">clientSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">(</span><span class="n">PF_INET</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_STREAM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="n">memset</span><span class="p">((</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sad</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">sad</span><span class="p">));</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="n">sad</span><span class="p">.</span><span class="n">sin_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_INET</span><span class="p">;</span><span class="w"> </span><span class="c1">// set family to Internet</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="n">sad</span><span class="p">.</span><span class="n">sin_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htons</span><span class="p">((</span><span class="n">u_short</span><span class="p">)</span><span class="n">port</span><span class="p">);</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">    </span><span class="n">ptrh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gethostbyname</span><span class="p">(</span><span class="n">host</span><span class="p">);</span><span class="w"> </span><span class="c1">// convert host name to ip address，调用解析器</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">    </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sad</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">,</span><span class="w"> </span><span class="n">ptrh</span><span class="o">-&gt;</span><span class="n">h_addr</span><span class="p">,</span><span class="w"> </span><span class="n">ptrh</span><span class="o">-&gt;</span><span class="n">h_length</span><span class="p">);</span><span class="w"> </span><span class="c1">// copy ip address to sad.sin_addr</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">    </span><span class="n">connect</span><span class="p">(</span><span class="n">clientSocket</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sad</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">sad</span><span class="p">));</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">    </span><span class="n">gets</span><span class="p">(</span><span class="n">Sentence</span><span class="p">);</span><span class="w"> </span><span class="c1">//get input from user</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">write</span><span class="p">(</span><span class="n">clientSocket</span><span class="p">,</span><span class="w"> </span><span class="n">Sentence</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">Sentence</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read</span><span class="p">(</span><span class="n">clientSocket</span><span class="p">,</span><span class="w"> </span><span class="n">modifiedSentence</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">modifiedSentence</span><span class="p">));</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;FROM Server: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">modifiedSentence</span><span class="p">);</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">    </span><span class="n">close</span><span class="p">(</span><span class="n">clientSocket</span><span class="p">);</span><span class="w"> </span><span class="c1">// close connection</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// server.c</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in</span><span class="w"> </span><span class="n">sad</span><span class="p">;</span><span class="w"> </span><span class="c1">// structure to hold an IP address of server</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in</span><span class="w"> </span><span class="n">cad</span><span class="p">;</span><span class="w"> </span><span class="c1">// client</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">welcomeSocket</span><span class="p">,</span><span class="w"> </span><span class="n">connectionSocket</span><span class="p">;</span><span class="w"> </span><span class="c1">// socket descriptor</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">hostent</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">;</span><span class="w"> </span><span class="c1">// pointer to a host table entry</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">clientSentence</span><span class="p">[</span><span class="mi">128</span><span class="p">];</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">capitalizedSentence</span><span class="p">[</span><span class="mi">128</span><span class="p">];</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="n">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">    </span><span class="n">welcomeSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">(</span><span class="n">PF_INET</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_STREAM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">    </span><span class="n">memset</span><span class="p">((</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sad</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">sad</span><span class="p">));</span>
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">    </span><span class="n">sad</span><span class="p">.</span><span class="n">sin_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_INET</span><span class="p">;</span>
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">    </span><span class="n">sad</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">INADDR_ANY</span><span class="p">;</span>
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">    </span><span class="n">sad</span><span class="p">.</span><span class="n">sin_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htons</span><span class="p">((</span><span class="n">u_short</span><span class="p">)</span><span class="n">port</span><span class="p">);</span>
+</span><span id="__span-3-21"><a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">    </span><span class="n">bind</span><span class="p">(</span><span class="n">welcomeSocket</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sad</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">sad</span><span class="p">));</span>
+</span><span id="__span-3-22"><a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>
+</span><span id="__span-3-23"><a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">    </span><span class="n">listen</span><span class="p">(</span><span class="n">welcomeSocket</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span>
+</span><span id="__span-3-24"><a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>
+</span><span id="__span-3-25"><a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-26"><a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">        </span><span class="n">connectionSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accept</span><span class="p">(</span><span class="n">welcomeSocket</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">cad</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">alen</span><span class="p">);</span>
+</span><span id="__span-3-27"><a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">read</span><span class="p">(</span><span class="n">connectionSocket</span><span class="p">,</span><span class="w"> </span><span class="n">clientSentence</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">clientSentence</span><span class="p">));</span>
+</span><span id="__span-3-28"><a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+</span><span id="__span-3-29"><a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">        </span><span class="cm">/* capitalize Sentence and store the result in capitalizedSentence*/</span>
+</span><span id="__span-3-30"><a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>
+</span><span id="__span-3-31"><a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">write</span><span class="p">(</span><span class="n">connectionSocket</span><span class="p">,</span><span class="w"> </span><span class="n">capitalizedSentence</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">capitalizedSentence</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>
+</span><span id="__span-3-33"><a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">        </span><span class="n">close</span><span class="p">(</span><span class="n">connectionSocket</span><span class="p">);</span>
+</span><span id="__span-3-34"><a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-3-35"><a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="p">}</span>
+</span></code></pre></div>
+<h2 id="udp">UDP套接字编程</h2>
+<p>没有握手，发送端在每个报文中明确地指定目标地IP地址和端口号，服务器必须从收到的分组中提取出发送端的IP地址和端口号。传送的数据可能乱序，也可能丢失。</p>
+<h3 id="_22">一个案例</h3>
+<p><img alt="network_pic95" src="../../assets/com%26net/network_pic95.png" /></p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1">// client.c</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in</span><span class="w"> </span><span class="n">sad</span><span class="p">;</span><span class="w"> </span><span class="c1">// structure to hold an IP address</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">clientSocket</span><span class="p">;</span><span class="w"> </span><span class="c1">// socket descriptor</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">hostent</span><span class="w"> </span><span class="o">*</span><span class="n">ptrh</span><span class="p">;</span><span class="w"> </span><span class="c1">// pointer to a host table entry</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">Sentence</span><span class="p">[</span><span class="mi">128</span><span class="p">];</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">modifiedSentence</span><span class="p">[</span><span class="mi">128</span><span class="p">];</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="n">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="n">clientSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">(</span><span class="n">PF_INET</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_DGRAM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="c1">// determine the server&#39;s address</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="n">memset</span><span class="p">((</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sad</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">sad</span><span class="p">));</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="n">sad</span><span class="p">.</span><span class="n">sin_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_INET</span><span class="p">;</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="n">sad</span><span class="p">.</span><span class="n">sin_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htons</span><span class="p">((</span><span class="n">u_short</span><span class="p">)</span><span class="n">port</span><span class="p">);</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="n">ptrh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gethostbyname</span><span class="p">(</span><span class="n">host</span><span class="p">);</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sad</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">,</span><span class="w"> </span><span class="n">ptrh</span><span class="o">-&gt;</span><span class="n">h_addr</span><span class="p">,</span><span class="w"> </span><span class="n">ptrh</span><span class="o">-&gt;</span><span class="n">h_length</span><span class="p">);</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">    </span><span class="n">gets</span><span class="p">(</span><span class="n">Sentence</span><span class="p">);</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">    </span><span class="n">addr_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="p">);</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sendto</span><span class="p">(</span><span class="n">clientSocket</span><span class="p">,</span><span class="w"> </span><span class="n">Sentence</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">Sentence</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sad</span><span class="p">,</span><span class="w"> </span><span class="n">addr_len</span><span class="p">);</span><span class="w"> </span><span class="c1">//使用strlen为了更好地节省空间，因为可能小于128个有效字符</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">    </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recvfrom</span><span class="p">(</span><span class="n">clientSocket</span><span class="p">,</span><span class="w"> </span><span class="n">modifiedSentence</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">modifiedSentence</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sad</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">addr_len</span><span class="p">);</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;FROM SERVER: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">modifiedSentence</span><span class="p">);</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">    </span><span class="n">close</span><span class="p">(</span><span class="n">clientSocket</span><span class="p">);</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// server.c</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in</span><span class="w"> </span><span class="n">sad</span><span class="p">;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr_in</span><span class="w"> </span><span class="n">cad</span><span class="p">;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">serverSocket</span><span class="p">;</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">hostent</span><span class="w"> </span><span class="o">*</span><span class="n">ptrh</span><span class="p">;</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">clientSentence</span><span class="p">[</span><span class="mi">128</span><span class="p">];</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">capitalizedSentence</span><span class="p">[</span><span class="mi">128</span><span class="p">];</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="n">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">    </span><span class="n">serverSocket</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">socket</span><span class="p">(</span><span class="n">PF_INET</span><span class="p">,</span><span class="w"> </span><span class="n">SOCK_DGRAM</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="n">memset</span><span class="p">((</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sad</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">sad</span><span class="p">));</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="n">sad</span><span class="p">.</span><span class="n">sin_family</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AF_INET</span><span class="p">;</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="w">    </span><span class="n">sad</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">INADDR_ANY</span><span class="p">;</span><span class="w"> </span><span class="c1">// set the local IP address</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">    </span><span class="n">sad</span><span class="p">.</span><span class="n">sin_port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">htons</span><span class="p">((</span><span class="n">u_short</span><span class="p">)</span><span class="w"> </span><span class="n">port</span><span class="p">);</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">    </span><span class="n">bind</span><span class="p">(</span><span class="n">serverSocket</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sad</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">sad</span><span class="p">));</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">recvfrom</span><span class="p">(</span><span class="n">serverSocket</span><span class="p">,</span><span class="w"> </span><span class="n">clientSentence</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">clientSentence</span><span class="p">),</span><span class="w"> </span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="w"> </span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">cad</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">addr_len</span><span class="p">);</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="w">        </span><span class="cm">/* capitalize the Sentence */</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">        </span><span class="n">n</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sendto</span><span class="p">(</span><span class="n">serverSocket</span><span class="p">,</span><span class="w"> </span><span class="n">capitalizedSentence</span><span class="p">,</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">capitalizedSentence</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="k">struct</span><span class="w"> </span><span class="nc">sockaddr</span><span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">cad</span><span class="p">,</span><span class="w"> </span><span class="n">addr_len</span><span class="p">);</span>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="p">}</span>
+</span></code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+<!-- Giscus -->
+<h2 id="__comments">评论</h2>
+
+<script src="https://giscus.app/client.js"
+        data-repo="fox766/notebook"
+        data-repo-id="R_kgDORDEHiQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORDEHic4C1ti2"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+<!-- Reload on palette change -->
+<script>
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object")
+        if (palette.color.scheme === "slate") {
+            var giscus = document.querySelector("script[src*=giscus]")
+            giscus.setAttribute("data-theme", "dark")
+        }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+                /* Instruct Giscus to change theme */
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../lec1/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 第1章：概论">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                第1章：概论
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../air-cond/" class="md-footer__link md-footer__link--next" aria-label="下一页: 暖通空调">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                暖通空调
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 fox766
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/fox766" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.footer"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

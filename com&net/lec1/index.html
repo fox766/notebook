@@ -1,0 +1,3377 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://fox766.github.io/notebook/com%26net/lec1/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../lec2/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>第1章：概论 - fox766's note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comic+Relief:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Comic Relief";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/timeline.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/css/timelinecard.css">
+    
+      <link rel="stylesheet" href="../../stylesheets/css/md.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="fox766&#39;s note" class="md-header__button md-logo" aria-label="fox766's note" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            fox766's note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              第1章：概论
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/fox766/notebook" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fox766/notebook
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../cs61A/" class="md-tabs__link">
+          
+  
+  
+  CS
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../air-cond/" class="md-tabs__link">
+          
+  
+  
+  Energy Engineering
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="fox766&#39;s note" class="md-nav__button md-logo" aria-label="fox766's note" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    fox766's note
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/fox766/notebook" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    fox766/notebook
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Welcome
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    更新记录
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    CS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            CS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    cs61A
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            cs61A
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    cs61A
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Function
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Control
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Higher Order Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Environments
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Function Example
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Recursion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tree Recursion
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Containers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Abstraction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Trees
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mutable Values
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mutable Functions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Iterations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inheritance
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Representation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec21/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Composition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec22/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Efficiency
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec23/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Decomposition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec24/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Example
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec26/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ethical AI &amp; Data
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Scheme
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec28/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exception
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec29/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Calculator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec30/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interpreters
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec31/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Declaring Programming
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec33/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Aggregation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61A/lec34/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Database
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    cs61B
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            cs61B
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs61B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Computer Network
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Network
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Computer Network
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    第1章：概论
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    第1章：概论
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是Internet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="什么是Internet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是互联网——从构成来看
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是互联网——从服务来看
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络边缘(edge)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网络边缘(edge)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络边缘：采用网络设施的面向连接服务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络边缘：采用基础设施的无连接服务
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络核心
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网络核心">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络核心：电路交换
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络核心：分组交换
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网络核心：分组交换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      排队延迟和丢失
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络核心的关键功能
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组交换：统计多路复用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组交换 vs. 电路交换
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组交换网络：存储-转发
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分组交换网络：存储-转发">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据报（datagram，无连接）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      虚电路（Virtual Circuit，有连接的）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      接入网和物理媒体
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="接入网和物理媒体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modem" class="md-nav__link">
+    <span class="md-ellipsis">
+      住宅接入：modem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digital-subscriber-line-dsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      接入网：digital subscriber line (DSL)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      接入网：线缆网络
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      住宅接入：电缆模式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      接入网：家庭网络
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      企业接入网络(Ethernet)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      无线接入网络
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      物理媒体
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="物理媒体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见的导引型媒体
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      无线链路
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internetisp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet结构和ISP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Internet结构和ISP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      互联网络结构：网络的网络
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internetnetwork-of-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet结构：network of networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isp" class="md-nav__link">
+    <span class="md-ellipsis">
+      ISP之间的连接
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组延时、丢失和吞吐量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分组延时、丢失和吞吐量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组丢失和延时是怎样发生的？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      四种分组延时
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      信道容量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      排队延时
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traceroute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traceroute 测试原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组丢失
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      吞吐量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      协议层次和服务模型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="协议层次和服务模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      服务和服务访问点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      服务的类型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="服务的类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection-oriented-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      面向连接的服务（Connection-oriented Service）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectionless-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      无连接的服务（Connectionless Service）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      服务和协议
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#du" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据单元（DU）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      分层处理和实现复杂系统的好处
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet协议栈
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isoosi" class="md-nav__link">
+    <span class="md-ellipsis">
+      ISO/OSI参考模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      封装和解封装
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      各层次的协议数据单元
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      历史
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="历史">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1960" class="md-nav__link">
+    <span class="md-ellipsis">
+      早期（1960前）计算机网路
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1961-1972" class="md-nav__link">
+    <span class="md-ellipsis">
+      1961 - 1972：早期分组交换概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1972-1980" class="md-nav__link">
+    <span class="md-ellipsis">
+      1972 - 1980：专用网络和网络互联
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1980-1990" class="md-nav__link">
+    <span class="md-ellipsis">
+      1980 - 1990：体系结构变化，网络数量激增，应用丰富
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19902000sweb" class="md-nav__link">
+    <span class="md-ellipsis">
+      1990，2000's：商业化，Web，新的应用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2005-" class="md-nav__link">
+    <span class="md-ellipsis">
+      2005-现在
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    第2章 应用层
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Energy Engineering
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Energy Engineering
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    暖通空调
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            暖通空调
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../air-cond/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    暖通空调
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../air-cond/test/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    小测
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../air-cond/lec1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    绪论
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../air-cond/lec2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    热湿负荷
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../air-cond/lec3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    空气调节
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#internet" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是Internet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="什么是Internet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是互联网——从构成来看
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      什么是互联网——从服务来看
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#edge" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络边缘(edge)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网络边缘(edge)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络边缘：采用网络设施的面向连接服务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络边缘：采用基础设施的无连接服务
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络核心
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网络核心">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络核心：电路交换
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络核心：分组交换
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网络核心：分组交换">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      排队延迟和丢失
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      网络核心的关键功能
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组交换：统计多路复用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组交换 vs. 电路交换
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组交换网络：存储-转发
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分组交换网络：存储-转发">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据报（datagram，无连接）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#virtual-circuit" class="md-nav__link">
+    <span class="md-ellipsis">
+      虚电路（Virtual Circuit，有连接的）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      接入网和物理媒体
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="接入网和物理媒体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modem" class="md-nav__link">
+    <span class="md-ellipsis">
+      住宅接入：modem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#digital-subscriber-line-dsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      接入网：digital subscriber line (DSL)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      接入网：线缆网络
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      住宅接入：电缆模式
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      接入网：家庭网络
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ethernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      企业接入网络(Ethernet)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      无线接入网络
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      物理媒体
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="物理媒体">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见的导引型媒体
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      无线链路
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internetisp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet结构和ISP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Internet结构和ISP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      互联网络结构：网络的网络
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internetnetwork-of-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet结构：network of networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isp" class="md-nav__link">
+    <span class="md-ellipsis">
+      ISP之间的连接
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组延时、丢失和吞吐量
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="分组延时、丢失和吞吐量">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组丢失和延时是怎样发生的？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      四种分组延时
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      信道容量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      排队延时
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traceroute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Traceroute 测试原理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      分组丢失
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      吞吐量
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      协议层次和服务模型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="协议层次和服务模型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      服务和服务访问点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      服务的类型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="服务的类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connection-oriented-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      面向连接的服务（Connection-oriented Service）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connectionless-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      无连接的服务（Connectionless Service）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      服务和协议
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#du" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据单元（DU）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      分层处理和实现复杂系统的好处
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#internet_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Internet协议栈
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#isoosi" class="md-nav__link">
+    <span class="md-ellipsis">
+      ISO/OSI参考模型
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      封装和解封装
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      各层次的协议数据单元
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      历史
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="历史">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1960" class="md-nav__link">
+    <span class="md-ellipsis">
+      早期（1960前）计算机网路
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1961-1972" class="md-nav__link">
+    <span class="md-ellipsis">
+      1961 - 1972：早期分组交换概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1972-1980" class="md-nav__link">
+    <span class="md-ellipsis">
+      1972 - 1980：专用网络和网络互联
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1980-1990" class="md-nav__link">
+    <span class="md-ellipsis">
+      1980 - 1990：体系结构变化，网络数量激增，应用丰富
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19902000sweb" class="md-nav__link">
+    <span class="md-ellipsis">
+      1990，2000's：商业化，Web，新的应用
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2005-" class="md-nav__link">
+    <span class="md-ellipsis">
+      2005-现在
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+
+                  
+
+
+  
+  
+
+
+<h1 id="1">第1章：概论</h1>
+<h2 id="internet">什么是Internet</h2>
+<h3 id="_1">什么是互联网——从构成来看</h3>
+<p>网络包括结点和边构成的与大小、形状等无关的拓扑。</p>
+<p>计算机网络也由节点和边构成。</p>
+<blockquote>
+<p>节点</p>
+</blockquote>
+<p>计算机网络中有两种节点，一是主机节点（用方形表示，包括主机及其上运行的应用程序），另一是数据交换节点（用圆形表示，包括路由器、交换机等网络交换设备）。</p>
+<p>方节点（主机=端系统[host，end system]）：包括设备本身，支持这个设备能够通讯的网络操作系统还有在操作系统上能驻留的网络应用程序。</p>
+<blockquote>
+<p>边：通信链路</p>
+</blockquote>
+<p>计算机网络中的边也有两种，一是access，接入网链路（和方的相关，主机连接到互联网的链路），二是backbone，主干链路（圆和圆接在一起）。</p>
+<p>光纤、同轴电缆、无线电、卫星</p>
+<p>传输速率=带宽（bps）</p>
+<blockquote>
+<p>协议</p>
+</blockquote>
+<p>对等层的实体在通讯的过程当中应该遵守的规则的集合。协议定义了在两个或多个通信实体之间交换的报文格式和次序，以及在报文传输和/或接收或其他事件方面所采取的动作。</p>
+<p>按层次不同可以区分成不同的协议。</p>
+<p>互联网Internet：以TCP、IP为主的一簇协议来支撑工作的网络。</p>
+<p>internet：与别人不连，也以TCP、IP为主，内部使用。</p>
+<h3 id="_2">什么是互联网——从服务来看</h3>
+<p>互联网是分布式的应用进程和基础设施，基础设施向进程提供通信服务，应用层以下为基础设施。</p>
+<p>基础设施提供的服务有两种，一种是面向连接的可靠服务（如TCP），另一种是无连接的不可靠服务（如UDP）。</p>
+<h2 id="edge">网络边缘(edge)</h2>
+<p>主机</p>
+<p>应用程序（客户端和服务器）</p>
+<p>应用程序通信模式包括：</p>
+<p>1.C/S模式（客户端/服务器）：主从模式，所有的资源来自于服务器，客户端向服务器发送请求。可扩展性比较差，随着请求载荷增加，达到一定阈值后能力断崖式下降。</p>
+<p>2.p2p模式（peer-peer对等模式）：可扩展性好，分布式文件分发系统如迅雷大兴其道。</p>
+<h3 id="_3">网络边缘：采用网络设施的面向连接服务</h3>
+<p>目标：在端系统之间传输数据</p>
+<p>握手：在数据传输之前做好准备，两个通信主机之间为连接建立状态。（连接状态的维持只有端系统维持为面向连接，中间所有路径上节点都维持为有连接。）</p>
+<p>TCP服务：向上层提供的服务为可靠的、保序的；流量控制（发送方不会淹没接收方）；拥塞控制：当网络拥塞时，发送方降低发送速率。</p>
+<h3 id="_4">网络边缘：采用基础设施的无连接服务</h3>
+<p>目标：在端系统之间传输数据</p>
+<p>UDP（User Datagram Protocol）用户数据报协议：无连接，不可靠数据传输，无流量控制，无拥塞控制。</p>
+<h2 id="_5">网络核心</h2>
+<p>网络核心：路由器的网状网络</p>
+<blockquote>
+<p>数据怎样通过网络进行传输？</p>
+</blockquote>
+<p>1.电路交换：为每个呼叫预留一个专有电路（如电话网）</p>
+<p>2.分组交换：将要传送的数据分成一个个单位：分组；将分组从一个路由器传到相邻路由器（hop），一段段最终从源端传到目标端；每段：采用链路的最大传输能力（带宽）。</p>
+<h3 id="_6">网络核心：电路交换</h3>
+<p><img alt="pic1" src="../../assets/com%26net/network_pic1.png" /></p>
+<p>信令系统为想要通讯的两者之间分配一条独享的线路。独享：好处是性能保障，坏处是资源共享能力弱。</p>
+<p>电路交换不适用于计算机网络：连接需要较长时间；独享性不适用于突发性发送（计算机之间的通信有突发性，如果使用线路交换，则浪费的片较多）；可靠性不高（核心节点被摧毁的话将影响到很多主机之间的联系）。</p>
+<blockquote>
+<p>如何将带宽分为pieces?</p>
+</blockquote>
+<p>频分（FDM）、时分（TDM）、波分（WDM）</p>
+<p><img alt="pic2" src="../../assets/com%26net/network_pic2.png" /></p>
+<p>时隙（slot），WDM（用于光纤通信）的原理和FDM差不多</p>
+<p>举例：</p>
+<p><img alt="pic3" src="../../assets/com%26net/network_pic3.png" /></p>
+<p><img alt="pic4" src="../../assets/com%26net/network_pic4.png" /></p>
+<h3 id="_7">网络核心：分组交换</h3>
+<p><img alt="network_pic5" src="../../assets/com%26net/network_pic5.png" /></p>
+<p>example:</p>
+<p><img alt="network_pic6" src="../../assets/com%26net/network_pic6.png" /></p>
+<h4 id="_8">排队延迟和丢失</h4>
+<p><img alt="network_pic7" src="../../assets/com%26net/network_pic7.png" /></p>
+<h3 id="_9">网络核心的关键功能</h3>
+<p>路由：决定分组采用的源到目标的路径（全局），通过路由算法算出；</p>
+<p>转发：将分组从路由器的输入链路转移到输出链路（局部）</p>
+<p><img alt="network_pic8" src="../../assets/com%26net/network_pic8.png" /></p>
+<h3 id="_10">分组交换：统计多路复用</h3>
+<p>也是对于时间片的一个划分，只不过相对于TDM而言，其划分时间片的方式是随机的而非固定的。</p>
+<h3 id="vs">分组交换 vs. 电路交换</h3>
+<p><img alt="network_pic9" src="../../assets/com%26net/network_pic9.png" /></p>
+<p>至于为什么求和从0到9，是因为没用裕量是要挂的。</p>
+<p>过度使用分组交换（如35个用户变成3.5w个用户）会造成网络拥塞。</p>
+<blockquote>
+<p>分组交换怎样提供类似电路交换的服务？</p>
+</blockquote>
+<h3 id="-">分组交换网络：存储-转发</h3>
+<p><img alt="network_pic10" src="../../assets/com%26net/network_pic10.png" /></p>
+<h4 id="datagram">数据报（datagram，无连接）</h4>
+<p>源主机发给目标主机的每一个分组都携带了目标主机的一个完整地址</p>
+<p>两个主机在通讯之前不需要握手，不需要维护通讯状态</p>
+<p>分组以存储转发的方式进行传递，每个分组之间的传递都是独立的</p>
+<p><img alt="network_pic11" src="../../assets/com%26net/network_pic11.png" /></p>
+<h4 id="virtual-circuit">虚电路（Virtual Circuit，有连接的）</h4>
+<p>每个交互节点之间保持通讯状态，不同于面向连接（仅端主机保持连接）。</p>
+<p>虚电路靠信令系统建立。</p>
+<p><img alt="network_pic39" src="../../assets/com%26net/network_pic39.png" /></p>
+<p>分为输入部分和输出部分，左边为输入，右边为输出，来自于哪（到哪去的）几号虚电路。</p>
+<h2 id="_11">接入网和物理媒体</h2>
+<blockquote>
+<p>怎样将端系统和边缘路由器连接？</p>
+</blockquote>
+<p>住宅接入网络、单位接入网络（学校、公司）、无线接入网络。</p>
+<p>两个指标：接入网络的带宽（bps），共享/专用</p>
+<h3 id="modem">住宅接入：modem</h3>
+<p>将上网数据调制加载音频信号上，在电话线上传输，在局端将其中的数据解调出来；反之亦然。（通过调频、调幅、调相位、综合调制）</p>
+<p>拨号调制解调器：56Kbps 的速率直接接入路由器 (通常更低) ；不能同时上网和打电话，不能总是在线；</p>
+<h3 id="digital-subscriber-line-dsl">接入网：digital subscriber line (DSL)</h3>
+<p><img alt="network_pic12" src="../../assets/com%26net/network_pic12.png" /></p>
+<p>0~4kHz用于语音通信。</p>
+<p>4kHz以上（按照非对称方式称为adsl)，有一段用于上行，有一段用于下行，仍然通过调制解调的方式来传递。</p>
+<p>采用现存的到交换局DSLAM的电话线，DSL线路上的数据被传到互联网，DSL线路上的语音被传到电话网。</p>
+<p>&lt; 2.5 Mbps上行传输速率(typically &lt; 1 Mbps)，&lt; 24 Mbps下行传输速率(typically &lt; 10 Mbps)。</p>
+<h3 id="_12">接入网：线缆网络</h3>
+<p><img alt="network_pic13" src="../../assets/com%26net/network_pic13.png" /></p>
+<p><img alt="network_pic14" src="../../assets/com%26net/network_pic14.png" /></p>
+<p>有线电视信号线缆双向改造，原有的只有下行传递。</p>
+<p>FDM：在不同频段传输不同信道的数据，数字电视和上网数据（上下行），还有些带宽用于控制传输信令。</p>
+<p>这种方式带宽是共享的。</p>
+<p>实际上，也可以通过电力调制解调器连入电网来实现上网，但在我国使用较少。</p>
+<h3 id="_13">住宅接入：电缆模式</h3>
+<p><img alt="network_pic15" src="../../assets/com%26net/network_pic15.png" /></p>
+<h3 id="_14">接入网：家庭网络</h3>
+<p><img alt="network_pic16" src="../../assets/com%26net/network_pic16.png" /></p>
+<h3 id="ethernet">企业接入网络(Ethernet)</h3>
+<p><img alt="network_pic17" src="../../assets/com%26net/network_pic17.png" /></p>
+<h3 id="_15">无线接入网络</h3>
+<p><img alt="network_pic18" src="../../assets/com%26net/network_pic18.png" /></p>
+<h3 id="_16">物理媒体</h3>
+<p>第0层，比特在发送-接收对间传播，物理链路指的是连接发送-接收对之间的物理介质/媒体，可以分为：</p>
+<ol>
+<li>导引型媒体：看得见，信号沿着固体媒介被导引：同轴电缆、光纤、双绞线</li>
+<li>非导引型媒体：开放的空间传输电磁波或者光信号，在电磁或者光信号中承载数字数据</li>
+</ol>
+<p>信号在导引型媒体中传播距离更远，因为在非导引型媒体中传播信号衰减快。</p>
+<h4 id="_17">常见的导引型媒体</h4>
+<p><strong>双绞线：</strong></p>
+<p>一对绝缘导线相互拧合在一起。</p>
+<p><strong>同轴电缆：</strong></p>
+<p>中间有铜芯，外面有铜网，形成同轴。</p>
+<p>宽带有多个频段，窄带只有一个频段。</p>
+<p><strong>光缆：</strong></p>
+<p>带宽极宽，误码率极低（受电磁干扰小），安全。</p>
+<h4 id="_18">无线链路</h4>
+<p>无线链路是双向的，且受到环境影响</p>
+<p>无线链路类型：地面微波、LAN、wide-area、卫星（同步轨道传播延迟不可忽略）</p>
+<h2 id="internetisp">Internet结构和ISP</h2>
+<h3 id="_19">互联网络结构：网络的网络</h3>
+<p>端系统通过<em>接入ISPs</em>(Internet Service Providers)连接到互联网</p>
+<p><em>接入ISPs</em>相应的必须是互联的，因此任何两个端系统可相互发送分组到对方</p>
+<blockquote>
+<p>问题: 给定数百万接入ISPs，如何将它们互联到一起？</p>
+<p><img alt="network_pic19" src="../../assets/com%26net/network_pic19.png" /></p>
+</blockquote>
+<ol>
+<li>
+<p>全部互联：O(N<sup>2</sup>)，不可扩展</p>
+</li>
+<li>
+<p>选项: 将每个接入ISP都连接到全局ISP（全局范围内覆盖）？客户ISPs和提供者ISPs有经济合约</p>
+</li>
+</ol>
+<p><img alt="network_pic20" src="../../assets/com%26net/network_pic20.png" /></p>
+<p>竞争：但如果全局ISP是有利可为的业务，那会有竞争者 </p>
+<p>合作：通过ISP之间的合作可以完成业务的扩展，肯定会有互联，对等互联的结算关系</p>
+<p>ISP之间有两种连接方式，一种是ISPA和ISPB各提供一个路由器，由光缆接在一起；另一种是ISPA、ISPB、ISPC都接入到IXP中进行交换（Internet exchange point）。</p>
+<p><img alt="network_pic21" src="../../assets/com%26net/network_pic21.png" /></p>
+<p>…然后业务会细分（全球接入和区域接入），区域网络将出现，用与将接入ISPs连接到全局ISPs</p>
+<p><img alt="network_pic22" src="../../assets/com%26net/network_pic22.png" /></p>
+<p>然后内容提供商网络ICPs(Internet Content Providers,e.g., Google, Microsoft, Akamai)可能会构建它们自己的网络（部署数据中心机房，通过专线连接），将它们的服务、内容更加靠近端用户，向用户提供更好的服务，减少自己的运营支出。</p>
+<p>这些数据中心机房往往离一些核心ISP比较近的位置。</p>
+<p><img alt="network_pic24" src="../../assets/com%26net/network_pic24.png" /></p>
+<p><img alt="network_pic23" src="../../assets/com%26net/network_pic23.png" /></p>
+<p>“tier-1”commercial ISPs (e.g., Level 3, Sprint, AT&amp;T, NTT), 国家或者国际范围的覆盖</p>
+<p>content provider network (e.g., Google)</p>
+<h3 id="internetnetwork-of-networks">Internet结构：network of networks</h3>
+<p>中心：第一层ISP（如UUNet, BBN/Genuity, Sprint,  AT&amp;T）国家/国际覆盖，节点数不多，速率极高。</p>
+<p><img alt="network_pic25" src="../../assets/com%26net/network_pic25.png" /></p>
+<p>第二层ISP，更小些的(通常是区域性的) ISP：与一个或多个第一层ISPs也可能与其他第二层ISP连接。</p>
+<p><img alt="network_pic26" src="../../assets/com%26net/network_pic26.png" /></p>
+<p>第三层ISP与其他本地ISP（local ISP）</p>
+<p><img alt="network_pic27" src="../../assets/com%26net/network_pic27.png" /></p>
+<h3 id="isp">ISP之间的连接</h3>
+<p><img alt="network_pic28" src="../../assets/com%26net/network_pic28.png" /></p>
+<p><img alt="network_pic29" src="../../assets/com%26net/network_pic29.png" /></p>
+<h2 id="_20">分组延时、丢失和吞吐量</h2>
+<h3 id="_21">分组丢失和延时是怎样发生的？</h3>
+<p>在路由器缓冲区的分组队列，分组到达的速率超过了链路输出的能力，此时分组等待排到队头、被传输。</p>
+<p><img alt="network_pic30" src="../../assets/com%26net/network_pic30.png" /></p>
+<h3 id="_22">四种分组延时</h3>
+<ol>
+<li>节点处理延时：检查bit级差错，检查分组首部和决定将分组导向何处。</li>
+<li>排队延时：随机的，依赖于路由器的拥塞程度，在输出链路上等待传输的时间。</li>
+<li>传输延时：设R=链路带宽（bps），L=分组长度（bits），将分组发送到链路上的时间=L/R。</li>
+<li>传播延时：设d=物理链路长度，s=媒体上传播速度（~2*10^8 m/s），传播延时=d/s。</li>
+</ol>
+<p>d_total = d_proc + d_queue + d_trans + d_prop</p>
+<h3 id="_23">信道容量</h3>
+<p>在LAN的情况下（d_prop小），发送方还未发完，接收方可能已经开始接收，信道容量小；</p>
+<p>而在WAN中（d_prop &gt;&gt; d_trans），发送方发完好一会儿后接收方可能才开始接收，并且要等待一定的传输延时才能收完，信道容量大。</p>
+<h3 id="_24">排队延时</h3>
+<p>设R=链路带宽(bps)，L=分组长度(bits)，a=分组到达队列的平均速率；</p>
+<p>流量强度<code>i=La/R</code></p>
+<p>i ~ 0：平均排队延时很小</p>
+<p>i ~ 1：延时变得很大</p>
+<p>i &gt; 1：比特到达队列的速率超过了从该队列输出的速率，平均排队延时将趋向无穷大！</p>
+<p><img alt="network_pic31" src="../../assets/com%26net/network_pic31.png" /></p>
+<h3 id="traceroute">Traceroute 测试原理</h3>
+<p><img alt="network_pic32" src="../../assets/com%26net/network_pic32.png" /></p>
+<p>根据ICMP协议，当分组中一个叫作TTL的字段为0（没经过一跳就减一）时，分组会被丢弃，并且发送一个报文告诉源主机被丢弃处的ip地址。</p>
+<p>于是沿着目的的路径，向每个路由器发送3个探测分组，每次增加TTL的值。源主机可以计时来获取RTT(Round Trip Time)。</p>
+<p>当到达目标主机时，由于分组描述的目标端口没有应用进程守候，目标主机向源主机发送一个目标端口不可达的报文，此时测试结束。</p>
+<p>发送回来的延迟为总路径的总延迟，会因为拥塞程度而可能随着节点先变大而后变小。</p>
+<h3 id="_25">分组丢失</h3>
+<p>链路的队列缓冲区容量有限，当分组到达一个满的队列时，该分组将会丢失，丢失的分组可能会被前一个节点或源端系统重传，或根本不重传。</p>
+<h3 id="_26">吞吐量</h3>
+<p>在源端和目标端之间传输的速率（数据量/单位时间），有效比特数量</p>
+<p>瞬间吞吐量、平均吞吐量</p>
+<p><img alt="network_pic33" src="../../assets/com%26net/network_pic33.png" /></p>
+<p>当某条链路（Rbps）同时有n个人在用，瓶颈链路将R/n纳入考虑。</p>
+<h2 id="_27">协议层次和服务模型</h2>
+<p><strong>层次化方式实现复杂网络的功能：</strong></p>
+<ol>
+<li>将网络复杂的功能分成功能明确的层次，每一层实现了其中一个或一组功能，功能中有其上层可以使用的功能：服务</li>
+<li>本层协议实体相互交互执行本层的协议动作，目的是实现本层功能，通过接口为上层提供更好的服务。</li>
+<li>在实现本层协议的时候，直接利用了下层所提供的服务</li>
+<li>本层的服务：借助下层服务实现本层协议实体之间交互带来的新功能（上层可以利用的）+更下层所提供的服务。</li>
+</ol>
+<h3 id="_28">服务和服务访问点</h3>
+<p>服务（Service）：低层实体向上层实体提供它们之间的通信能力。</p>
+<ul>
+<li>服务用户（service user）</li>
+<li>服务提供者（service provider）</li>
+</ul>
+<p>服务访问点SAP（Service Access Point）：上层使用下层提供的服务通过层间的接口——<strong>地点</strong>；区分发送方和接收方。</p>
+<ul>
+<li>地址（address）：下层的一个实体支撑着上层的多个实体， SAP有标志不同上层实体的作用。</li>
+</ul>
+<p>原语（primitive）：服务用户采用什么形式来使用服务提供者提供的服务。上层使用下层服务的形式，高层使用低层提供的服务，以及低层向高层提供服务都是通过服务访问原语来进行交互的——<strong>形式</strong>。</p>
+<h3 id="_29">服务的类型</h3>
+<h4 id="connection-oriented-service">面向连接的服务（Connection-oriented Service）</h4>
+<p>握手 </p>
+<h4 id="connectionless-service">无连接的服务（Connectionless Service）</h4>
+<p>不需要握手</p>
+<h3 id="_30">服务和协议</h3>
+<p>服务（Service）：低层实体向上层实体提供它们之间的通信能力，是通过原语来操作的，垂直。</p>
+<p>协议：对等层实体之间在相互通信的过程中，需要遵循的规则的集合，水平。</p>
+<p>本层协议的实现要靠下层提供的服务来实现，本层实体通过协议为上层提供更高级的服务。</p>
+<h3 id="du">数据单元（DU）</h3>
+<p><img alt="network_pic34" src="../../assets/com%26net/network_pic34.png" /></p>
+<p>n+1层交给n层传输的数据是SDU，服务数据单元。</p>
+<p>传SDU经过层间接口时所需要的一些控制信息为ICI，接口控制信息。</p>
+<p>IDU = ICI + SDU.</p>
+<p>1对1：上层来的SDU + 本层的一些控制信息（n-header），形成了本层的PDU(n-PDU)，也就是协议数据单元。</p>
+<p>1对多：另一种情况，SDU比较大，进入n层后先分解成若干小块，每块加上n-header，形成若干个n-PDU。</p>
+<p>多对1：还有一种情况，SDU非常小，进入n层后先合并成一个块，加上n-header，形成n-PDU。</p>
+<p><img alt="network_pic35" src="../../assets/com%26net/network_pic35.png" /></p>
+<h3 id="_31">分层处理和实现复杂系统的好处</h3>
+<p>概念化：结构清晰，便于标示网络组件，以描述其相互关系。</p>
+<p>结构化：模块化更易于维护和系统升级，改变某一层服务的实现不影响系统中的其他层次，便于采用新的技术。</p>
+<p>坏处：交换信息效率较低。</p>
+<h3 id="internet_1">Internet协议栈</h3>
+<p><img alt="network_pic36" src="../../assets/com%26net/network_pic36.png" /></p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> 应用层：网络应用</li>
+<li>为人类用户或者其他应用进程提供网络应用服务</li>
+<li>FTP，SMTP，HTTP，DNS</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 传输层：主机之间的数据传输</li>
+<li>在网络层提供的端到端的通信基础上，完成<strong>进程到进程</strong>的区分，将不可靠的通信变为可靠的通信。</li>
+<li>TCP，UDP</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 网络层：为数据从源到目的选择路由</li>
+<li>主机主机之间的通信，<strong>端到端</strong>的通信，<strong>不可靠</strong>，传输单位是一个个分组。</li>
+<li>IP，路由协议。</li>
+<li>转发，路由。</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 链路层：相邻网络节点间的数据传输</li>
+<li>传输以帧为单位的数据，需要区分哪些bit的组合是一个帧的开始，哪些bit的组合是一个帧的结束。</li>
+<li>在相邻两点之间的<strong>点到点</strong>的传输，服务可能是可靠的或者不可靠的。</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 物理层：将frame中的每一个bit一组一组转变成物理信号，通过介质传播，在接收端再把物理信号转变回数字信号。</li>
+</ul>
+<h3 id="isoosi">ISO/OSI参考模型</h3>
+<p><img alt="network_pic37" src="../../assets/com%26net/network_pic37.png" /></p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> 表示层：表示管理，表示转换。允许应用解释传输的数据，e.g.，加密，压缩，机器相关的表示转换。</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 会话层：会话管理（建立会话，拆会话，维持会话）。数据交换的同步，检查点，恢复。</li>
+</ul>
+<p>在互联网协议栈中，这两层实现的功能是由应用层自己去做的。</p>
+<h3 id="_32">封装和解封装</h3>
+<p><img alt="network_pic38" src="../../assets/com%26net/network_pic38.png" /></p>
+<p>在源处做一个大的封装，经过两层交换设备（如交换机），进行一个两层的解封装再封装，经过三层交换设备（路由器）时，进行三层的解封装再封装，最后到达目的，进行一个大的解封装。</p>
+<h3 id="_33">各层次的协议数据单元</h3>
+<p>应用层：报文（message）</p>
+<p>传输层：报文段（segment）：TCP段，UDP数据报</p>
+<p>网络层：分组packet（如果无连接方式：数据报datagram）</p>
+<p>数据链路层：帧（frame）</p>
+<p>物理层：位（bit）</p>
+<h2 id="_34">历史</h2>
+<h3 id="1960">早期（1960前）计算机网路</h3>
+<p>线路交换网络，建立时间过长，独享性不适合突发性通信，可靠性不高。</p>
+<h3 id="1961-1972">1961 - 1972：早期分组交换概念</h3>
+<p>ARPAnet证明了分组交换的可行性。</p>
+<p>NCP协议：相当于传输层和网络层在一起，支持应用开发。</p>
+<h3 id="1972-1980">1972 - 1980：专用网络和网络互联</h3>
+<p>网络互联的必要性</p>
+<p>Cerf and Kahn采用覆盖的方式，一人发一个ip帽子，ip over everything，ip层以下为物理网络，以上为ip网络，路由器仅需要在软件层面做一个改变。</p>
+<p>1974：网际互联的Cerf and Kahn体系结构，其互联原则：极简、自治；尽力而为服务模型；无状态的路由器；分布控制；</p>
+<h3 id="1980-1990">1980 - 1990：体系结构变化，网络数量激增，应用丰富</h3>
+<p>1983：TCP/IP部署，标记日。NCP分化成2个层次，TCP/IP，从而出现UDP。</p>
+<p>1983：DNS 定义，完成域名到IP地址的转换。</p>
+<p>1985：ftp 协议定义</p>
+<p>1988：TCP拥塞控制</p>
+<h3 id="19902000sweb">1990，2000's：商业化，Web，新的应用</h3>
+<p>UNIX 中TCP/IP的免费捆绑</p>
+<p>1990年代初Web：</p>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> hypertext [Bush 1945, Nelson 1960’s]</li>
+<li class="task-list-item"><input type="checkbox" disabled/> HTML, HTTP：Berners-Lee，做完物理实验后数据放在web服务器上，当时还是命令行浏览器。</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 1994: Mosaic (Netscape，andreesen)，图形化浏览器和服务器，网景公司。</li>
+</ul>
+<p>1990后期-21世纪：新一代杀手级应用（即时讯息，P2P文件共享，社交网络）</p>
+<p>2001网络泡沫。</p>
+<h3 id="2005-">2005-现在</h3>
+<p>数百亿主机，移动互联。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+<!-- Giscus -->
+<h2 id="__comments">评论</h2>
+
+<script src="https://giscus.app/client.js"
+        data-repo="fox766/notebook"
+        data-repo-id="R_kgDORDEHiQ"
+        data-category="Announcements"
+        data-category-id="DIC_kwDORDEHic4C1ti2"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+<!-- Reload on palette change -->
+<script>
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object")
+        if (palette.color.scheme === "slate") {
+            var giscus = document.querySelector("script[src*=giscus]")
+            giscus.setAttribute("data-theme", "dark")
+        }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]")
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette")
+            if (palette && typeof palette.color === "object") {
+                var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+                /* Instruct Giscus to change theme */
+                var frame = document.querySelector(".giscus-frame")
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                )
+            }
+        })
+    })
+</script>
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: Computer Network">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                Computer Network
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../lec2/" class="md-footer__link md-footer__link--next" aria-label="下一页: 第2章 应用层">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                第2章 应用层
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 fox766
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/fox766" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.footer"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

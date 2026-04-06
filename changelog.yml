@@ -1,0 +1,30 @@
+- "2026":
+  - "2026-4-6":
+    - pageupdate: Home > new pics.
+    - pageupdate:
+        text: CS > Computer Network > Application Layer
+        href: ../com&net
+    - pageupdate:
+        text: Energy Engineering > 暖通空调 > 热湿负荷、空气调节、小测
+        href: ../air-cond
+  - "2026-3-11":
+    - newpage:
+        text: Energy Engineering > 暖通空调
+        href: ../air-cond
+    - newpage:
+        text: CS > Computer Network
+        href: ../com&net
+  - "2026-2-11":
+    - pageupdate:
+        text: CS > cs61A > ...
+        href: ../cs61A
+  - "2026-2-10":
+    - newpage: Home > 更新记录
+    - newpage:
+        text: CS > cs61A > Function ...
+        href: ../cs61A/Function
+    - newpage:
+        text: CS > cs61B > ...
+        href: ../cs61B
+  - "2026-2-2":
+    - newpage: Home > Welcome
