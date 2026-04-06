@@ -13,6 +13,16 @@
 ## Something About Me
 ### My Hobbies 
 :ping_pong: & :computer:
+#### great times of me:
+**过了大师试炼终阶，拔出大师剑**
+![img](assets/home_4.jpg)
+
+**第三次打出月下无限连**
+![img](assets/home_2.jpg)
+
+**xb2小绿wow**
+![img](assets/home_3.jpg)
+
 
 ### My accounts
 **[:fontawesome-brands-github:](https://github.com/fox766) [My GitHub](https://github.com/fox766)**

@@ -1,4 +1,12 @@
 - "2026":
+  - "2026-4-6":
+    - pageupdate: Home > new pics.
+    - pageupdate:
+        text: CS > Computer Network > Application Layer
+        href: ../com&net
+    - pageupdate:
+        text: Energy Engineering > 暖通空调 > 热湿负荷、空气调节、小测
+        href: ../air-cond
   - "2026-3-11":
     - newpage:
         text: Energy Engineering > 暖通空调

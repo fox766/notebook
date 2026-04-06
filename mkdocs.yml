@@ -117,10 +117,15 @@ nav:
     - Computer Network:
       - com&net/index.md
       - com&net/lec1.md
+      - com&net/lec2.md
+  
   - Energy Engineering:
     - 暖通空调:
       - air-cond/index.md
+      - air-cond/test.md
       - air-cond/lec1.md
+      - air-cond/lec2.md
+      - air-cond/lec3.md
 
 
 
